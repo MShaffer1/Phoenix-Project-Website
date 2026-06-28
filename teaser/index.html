@@ -11,7 +11,7 @@
 
     body {
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        color: #2c3e50;
+        color: #2F2F2F; /* Soft, sharp modern off-black instead of blue-gray */
         margin: 0;
         padding: 20px;
         line-height: 1.6;
@@ -24,9 +24,9 @@
         margin: 0 auto;
     }
 
-    /* Responsive Header Bar */
+    /* Responsive Header Bar styled in Brand Pink & Gold */
     .web-header {
-        background-color: #1a252f;
+        background: linear-gradient(135deg, #FF6B8B, #E05370); /* Vibrant Brand Pink Gradient */
         color: #ffffff;
         padding: 15px 20px;
         margin-bottom: 30px;
@@ -36,24 +36,26 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 10px;
+        border-bottom: 4px solid #D4AF37; /* Metallic Gold Accent Border */
+        box-shadow: 0 2px 8px rgba(255, 107, 139, 0.15);
     }
     
     .brand-title {
         font-size: 14pt;
         font-weight: bold;
         letter-spacing: 1px;
-        color: #f39c12; /* Warm amber accent */
+        color: #ffffff; /* Clean white against the pink background */
     }
     
     .brand-url {
         font-size: 9.5pt;
-        color: #bdc3c7;
+        color: #fce4ec; /* Soft light pink text */
     }
 
     .main-title {
         font-size: 22pt;
         font-weight: bold;
-        color: #1a252f;
+        color: #FF6B8B; /* Primary Brand Pink for major visual hierarchy */
         margin: 0 0 5px 0;
         line-height: 1.2;
     }
@@ -63,7 +65,7 @@
         color: #7f8c8d;
         margin: 0 0 30px 0;
         font-style: italic;
-        border-bottom: 2px solid #f39c12;
+        border-bottom: 2px solid #D4AF37; /* Replaced orange border with Brand Gold */
         padding-bottom: 12px;
     }
 
@@ -71,34 +73,36 @@
     .content-grid {
         display: flex;
         flex-direction: row;
-        gap: 40px; /* Generous breathing room between columns */
+        gap: 40px; 
         margin-bottom: 30px;
     }
 
     /* Main Technical Content */
     .left-col {
-        flex: 1.6; /* Takes up roughly 62% of width */
+        flex: 1.6; 
         min-width: 300px;
     }
 
     /* Sidebar Panels */
     .right-col {
-        flex: 1; /* Takes up roughly 38% of width */
+        flex: 1; 
         min-width: 280px;
-        background-color: #f8f9fa;
-        border-top: 4px solid #1a252f;
+        background-color: #FAFAFA; /* Ultra-clean light gray background */
+        border-top: 4px solid #FF6B8B; /* Pink accent bar */
+        border-bottom: 4px solid #D4AF37; /* Gold balance bar */
         padding: 25px;
         border-radius: 4px;
         height: fit-content;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.02);
     }
 
     h2 {
         font-size: 13pt;
-        color: #1a252f;
+        color: #C5A028; /* Polished deep gold for text readability */
         margin: 0 0 15px 0;
         text-transform: uppercase;
         letter-spacing: 0.5px;
-        border-bottom: 1px solid #dcdde1;
+        border-bottom: 1px solid #f1f2f6;
         padding-bottom: 5px;
     }
     
@@ -116,21 +120,22 @@
         margin-bottom: 8px;
     }
 
-    /* Stat Box Cards */
+    /* Stat Box Cards stylized with Red/Pink and Gold accents */
     .stat-box {
         background-color: #ffffff;
-        border: 1px solid #e2e8f0;
+        border: 1px solid #fce4ec; /* Subtle pink frame border */
+        border-left: 4px solid #D4AF37; /* Strong Gold anchor line */
         border-radius: 6px;
         padding: 15px;
         margin-bottom: 15px;
         text-align: center;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        box-shadow: 0 2px 4px rgba(255, 107, 139, 0.03);
     }
 
     .stat-number {
         font-size: 22pt;
         font-weight: bold;
-        color: #e74c3c;
+        color: #E05370; /* Deep pink for data emphasis instead of standard red */
         margin-bottom: 2px;
     }
 
@@ -144,8 +149,8 @@
 
     /* Legal Disclaimer Panel */
     .legal-notice {
-        background-color: #fff9e6;
-        border: 1px solid #ffeaa7;
+        background-color: #FFFDF3; /* Light warm cream */
+        border: 1px solid #F4EABE; /* Light gold border */
         padding: 15px;
         border-radius: 4px;
         margin-top: 25px;
@@ -156,7 +161,7 @@
 
     .legal-title {
         font-weight: bold;
-        color: #d35400;
+        color: #A9861B; /* Balanced dark gold for warning title */
         margin-bottom: 5px;
         text-transform: uppercase;
         letter-spacing: 0.5px;
