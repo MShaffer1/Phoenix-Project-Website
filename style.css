@@ -1,0 +1,241 @@
+/* 1. Import Great Vibes Font */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Basic Reset */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
+    background-color: #000000;
+}
+
+/* Hero Section */
+.hero {
+   display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    height: 100vh;          /* Force it to strictly lock to 100% viewport height */
+    min-height: 100vh;
+    max-height: 100vh;      /* Hard cap to completely eliminate vertical scrolling */
+    
+    /* Update image sizing rules here */
+    background-image: url('RoundTPPhoenix.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 60%;  /* Option: use 'contain' to guarantee the image will fit the screen height */
+    /* background-size: 45%; */ /* Option B: Alternatively, use a smaller percentage if contain leaves too much gap */
+    
+    overflow: hidden;       /* Safety net to crop out anything trying to cause a scrollbar */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.hero-overlay {
+    background: transparent; 
+    padding: 40px; /* Increased slightly for safety */
+    text-align: right; 
+    color: white;
+    max-width: 75%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    margin-top: 0;
+    text-align: left;
+    max-height: 95vh;
+
+}
+
+/* Main Title: No changes needed, but ensuring standard block behavior */
+h1 { 
+   font-family: 'Great Vibes', cursive;
+    font-size: clamp(3rem, 6vw, 5rem); 
+    margin-bottom: 0.75rem; 
+    color: #f72585; 
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 2px 2px 10px rgba(0, 0, 0, 1);
+    line-height: 1.1;
+
+    /* --- THE ADJUSTMENT --- */
+    position: absolute;
+    left: 55%; /* Starts rendering the title just past the 50% centerline */
+    transform: translateY(-130px);
+    text-align: left; /* Ensures the text flows naturally from that starting point */
+    
+}
+
+/* Subtitle */
+.subtitle { 
+    font-family: 'Lucida Calligraphy', 'Apple Chancery', cursive;
+    font-size: clamp(1.1rem, 2.2vw, 1.6rem); 
+    font-weight: normal;
+    color: #ffffff;
+    margin-bottom: 1.5rem; /* Clean drop down to the quote block */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+    line-height: 1.4;
+
+/* --- ALIGN WITH THE TITLE --- */
+    position: absolute;
+    left: 52%;           /* Matches the h1 exact left coordinates */
+    white-space: nowrap; /* Keeps it on one clean line */
+    text-align: left;    /* Changes it from right-aligned to left */
+
+    /* --- THE VERTICAL SLIDER --- */
+    transform: translateY(-60px); /* Shoves it up, but sits below the title's -130px */
+}
+
+/* Unified Mission Block Container */
+.mission-inline {
+        width: 100%;
+}
+
+/* The Quote Text */
+.mission-inline p {
+    font-style: italic;
+    font-size: clamp(1.1rem, 1.8vw, 1.35rem); 
+    line-height: 1.5;
+	color: #F16AA0; 
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 2px 2px 5px rgba(0, 0, 0, 0.9);
+
+    /* --- POSITIONING --- */
+    position: absolute;
+    left: 60%;           /* Shifts it right to start around the subtitle's center */
+    white-space: nowrap; 
+    text-align: left;
+
+    /* --- VERTICAL SLIDER --- */
+    transform: translateY(-30px); /* Adjust this to control gap below the subtitle */
+}
+
+/* The Technical Tagline */
+.tech-tag {
+    font-size: clamp(0.75rem, 1.4vw, 0.95rem); /* Scaled down slightly to read like a crisp detail tag */
+    color: #a0aab2; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    line-height: 1.4;
+	color: #dfe4ea; 
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    
+    /* --- POSITIONING --- */
+    position: absolute;
+    left: 45%;           /* Aligns perfectly under the left edge of the subtitle */
+    white-space: normal;
+    text-align: center;
+
+    /* --- VERTICAL SLIDER --- */
+    transform: translateY(50px); /* Sits safely below the first line */
+}
+
+/* Responsive Call-to-Action Link Button */
+.cta-button {
+    display: inline-block;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #f72585;
+    padding: 14px 28px; 
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.4);
+    letter-spacing: 0.5px;
+    white-space: nowrap; /* Forces text to stay safely on one line inside the pill button */
+
+/* --- POSITIONING --- */
+    position: absolute;
+    left: 58%; /* Anchors it initially to the same left baseline as the tagline */
+    
+    /* --- THE VERTICAL & HORIZONTAL SLIDER --- */
+    /* translateY pushes it safely below the tagline's 45px.
+       translateX adjusts the button slightly right so it centers beautifully under the text. */
+    transform: translateY(150px) translateX(58px);
+}
+
+/* --- MOBILE MODIFIER --- */
+@media (max-width: 768px) {
+    /* 1. Remove the background image layout from the main section container */
+    .hero {
+        background-image: none !important; /* Strips the background image on mobile */
+        height: auto !important;           /* Unlocks the rigid 100vh cap so elements can breathe */
+        max-height: none !important;
+        overflow-y: auto !important;        /* Ensures users can scroll if your content gets long */
+    }
+
+    /* 2. Re-introduce the graphic at the top of the column layout */
+    .hero-overlay {
+        max-width: 100%;
+        width: 100%;
+        padding: 20px;
+        align-items: center;    /* Centering everything horizontally */
+        justify-content: flex-start;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Pseudo-element to inject your image cleanly at the very top */
+    .hero-overlay::before {
+        content: "";
+        display: block;
+        width: 160px;          /* Adjust size to make the round phoenix graphic larger or smaller */
+        height: 160px;
+        background-image: url('RoundTPPhoenix.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 30px;      /* Spacing from the top of the phone screen */
+        margin-bottom: 10px;   /* Spacing between the graphic and your Title */
+    }
+
+    /* 3. Strip absolute coordinates from all text layers */
+    h1, 
+    .subtitle, 
+    .mission-inline p, 
+    .tech-tag, 
+    .cta-button {
+        position: relative !important;
+        left: 0 !important;
+        transform: none !important;
+        text-align: center !important;
+        white-space: normal !important; 
+        margin-bottom: 20px;            
+    }
+
+    /* 4. Fine-tuning element scales for standard mobile viewports */
+    h1 {
+        font-size: 3.2rem; 
+        margin-bottom: 5px;
+    }
+
+    .subtitle {
+        font-size: 1.15rem;
+        margin-bottom: 25px;
+    }
+
+    .mission-inline p {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .tech-tag {
+        font-size: 0.85rem;
+        max-width: 90%;     
+        margin-bottom: 35px; 
+    }
+
+    .cta-button {
+        display: inline-block;
+        width: auto;
+        max-width: 90%;
+        white-space: nowrap !important; 
+        margin-bottom: 50px; /* Safe padding at the absolute bottom of the scroll view */
+    }
+}
