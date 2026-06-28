@@ -29,30 +29,38 @@
 
     /* Responsive Header Bar styled in Brand Pink & Gold */
     .web-header {
-    background-color: #f72585; /* Your signature vibrant pink */
-    color: #ffffff;
-    padding: 15px 20px;
+   /* Step out of the teaser folder to pull the transparent image */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('../Transparent Phoenix.png') no-repeat center center;
+    background-size: cover; /* Blends and stretches the image across the whole banner */
+    
+    padding: 30px 20px; /* Gives the artwork breathing room */
     margin-bottom: 30px;
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
     flex-wrap: wrap;
     gap: 10px;
-    border-bottom: 3px solid #D4AF37; /* Clean Gold Accent Line */
-        box-shadow: 0 2px 8px rgba(255, 107, 139, 0.15);
+    border-bottom: 3px solid #D4AF37; /* Metallic Gold bottom frame line */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
     
     .brand-title {
         font-family: 'Great Vibes', cursive;
-        font-size: 32pt;
+        font-size: 34pt;
         font-weight: normal;
-        color: #ffffff; /* Clean white against the pink background */
+        color: #D4AF37; /* Elegant Brand Gold text */
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9); /* Stronger shadow to pop off the graphic background */
     }
     
     .brand-url {
-        font-size: 9.5pt;
-        color: #FDE8F0; /* Soft light pink text */
+        font-family: 'Inter', sans-serif;
+       font-size: 11pt; 
+       font-weight: 600;
+       letter-spacing: 1px;
+       color: #f72585; /* Your signature vibrant pink */
+       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
     }
 
     .main-title {
