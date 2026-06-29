@@ -132,7 +132,7 @@ h1 {
     
     /* --- POSITIONING --- */
     position: absolute;
-    left: 45%;           /* Aligns perfectly under the left edge of the subtitle */
+    left: 40%;           /* Aligns perfectly under the left edge of the subtitle */
     white-space: normal;
     text-align: center;
 
