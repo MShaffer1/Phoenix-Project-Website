@@ -158,7 +158,7 @@ h1 {
 
 /* --- POSITIONING --- */
     position: absolute;
-    left: 65%; /* Anchors it initially to the same left baseline as the tagline */
+    left: 60%; /* Anchors it initially to the same left baseline as the tagline */
     
     /* --- THE VERTICAL & HORIZONTAL SLIDER --- */
     /* translateY pushes it safely below the tagline's 45px.
