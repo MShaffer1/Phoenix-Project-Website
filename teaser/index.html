@@ -29,11 +29,17 @@
 
     /* Responsive Header Bar styled in Brand Pink & Gold */
     .web-header {
-   /* Step out of the teaser folder to pull the transparent image */
-    background: url('../Transparent Phoenix.png') no-repeat center 20%;
+  .web-header {
+    /* Dark on the edges, completely clear (0% opacity) in the middle over the head */
+    background: linear-gradient(to right, 
+                    rgba(0, 0, 0, 0.75) 0%, 
+                    rgba(0, 0, 0, 0) 35%, 
+                    rgba(0, 0, 0, 0) 65%, 
+                    rgba(0, 0, 0, 0.75) 100%), 
+                url('../Transparent Phoenix.png') no-repeat center 20%;
     background-size: cover;
     
-    padding: 30px 20px; /* Gives the artwork breathing room */
+    padding: 30px 20px; 
     margin-bottom: 30px;
     border-radius: 4px;
     display: flex;
@@ -41,8 +47,7 @@
     align-items: center; 
     flex-wrap: wrap;
     gap: 10px;
-    border-bottom: 3px solid #D4AF37; /* Metallic Gold bottom frame line */
-    border-top: 3px solid #D4AF37;   
+    border-bottom: 3px solid #D4AF37; 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
     
