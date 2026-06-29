@@ -52,13 +52,14 @@ body {
 
 }
 
-/* Main Title: No changes needed, but ensuring standard block behavior */
+/* Main Title */
 h1 { 
    font-family: 'Great Vibes', cursive;
     font-size: clamp(3rem, 6vw, 5rem); 
     margin-bottom: 0.75rem; 
     color: #f72585; 
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 2px 2px 10px rgba(0, 0, 0, 1);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.95), 
+                 0 0 8px #D4AF37;
     line-height: 1.1;
 
     /* --- THE ADJUSTMENT --- */
@@ -74,9 +75,10 @@ h1 {
     font-family: 'Lucida Calligraphy', 'Apple Chancery', cursive;
     font-size: clamp(1.1rem, 2.2vw, 1.6rem); 
     font-weight: normal;
-    color: #ffffff;
+    color: #fcfaf2;
     margin-bottom: 1.5rem; /* Clean drop down to the quote block */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1),
+		0 0 8px #D4AF37;
     line-height: 1.4;
 
 /* --- ALIGN WITH THE TITLE --- */
@@ -120,8 +122,13 @@ h1 {
     letter-spacing: 2px;
     font-weight: 600;
     line-height: 1.4;
-	color: #dfe4ea; 
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+	/* 1. Warm cream font reduces the starkness of pure white */
+    color: #fcfaf2; 
+    
+    /* 2. Layered Aura: Tight black outline for crisp readability, 
+          followed by a beautiful metallic gold glow to match the frames */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1),
+                 0 0 8px #D4AF37;
     
     /* --- POSITIONING --- */
     position: absolute;
