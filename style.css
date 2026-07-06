@@ -101,7 +101,7 @@ h1 {
     position: absolute;
     left: 60%;           
     white-space: nowrap; 
-    text-align: left;
+    text-align: center;
 
     transform: translateY(-30px); 
 }
@@ -111,17 +111,17 @@ h1 {
     font-size: clamp(0.75rem, 1.4vw, 0.95rem); 
     letter-spacing: 2px;
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.5;
     color: #fcfaf2; 
     
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;
     
     position: absolute;
-    left: 40%;           
+    left: 50%;                    /* Pushes the starting point out */
+    width: 45%;                   /* Limits the width so it wraps beautifully */
     white-space: normal;
-    text-align: center;
-
-    transform: translateY(50px); 
+    text-align: center;           /* Centers the text lines inside its block */
+	transform: translateY(30px);
 }
 
 
