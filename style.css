@@ -30,7 +30,7 @@ body {
     background-image: url('RoundTPPhoenix2.PNG');
     background-position: left center;
     background-repeat: no-repeat;
-    background-size: 60% contain;  
+    background-size: 60% auto;  
     
     overflow: hidden;       /* Safety net to crop out anything trying to cause a scrollbar */
     box-sizing: border-box;
