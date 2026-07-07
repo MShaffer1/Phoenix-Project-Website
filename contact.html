@@ -317,7 +317,7 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
         }
     } catch (error) {
         status.style.color = "#E05370";
-        status.innerText = "Oops! Something went wrong. Please try again later.";
+        status.innerText = `Debug Notice: ${error.message || 'Connection Interrupted'}`;
     } finally {
         btn.disabled = false;
         btn.innerText = "SEND MESSAGE";
