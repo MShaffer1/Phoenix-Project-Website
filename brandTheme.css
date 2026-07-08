@@ -145,6 +145,8 @@ body {
 
 /* Sidebar Panels */
 .right-col {
+	color: #333333
+	font-weight: 500;
     flex: 1; 
     min-width: 280px;
     background-color: #FAFAFA; 
@@ -154,6 +156,36 @@ body {
     border-radius: 4px;
     height: fit-content;
     box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+/* Styling the Pillar Titles */
+.pillar-title {
+    font-size: 1.2rem; /* Adjust this size (e.g., 1.1rem, 1.2rem) */
+    font-weight: 600;
+    color: #E9166A; /* Using your brand pink */
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+/* Adding the bullet point and italicizing the text */
+.pillar-text {
+    font-size: 1.0rem;      /* Adjust text size here */
+    color: #444444;         /* Dark grey for contrast */
+    font-style: italic;     /* Italicizes the text */
+    padding-left: 20px;     /* Creates space for the bullet */
+    position: relative;
+    margin-bottom: 20px;    /* Space between pillars */
+}
+
+/* This creates the bullet point automatically */
+.pillar-text::before {
+    content: "•";           /* The bullet symbol */
+    color: #D4AF37;         /* Using your brand gold */
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
 }
 
 h2 {
