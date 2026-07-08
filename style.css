@@ -113,15 +113,14 @@ h1 {
     font-weight: 600;
     line-height: 1.5;
     color: #fcfaf2; 
-    
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;
     
     position: absolute;
-    left: 52%;                    /* Pushes the starting point out */
-    width: 45%;                   /* Limits the width so it wraps beautifully */
+    left: 40%;              /* Move this to align with the start of your subtitle */
+    width: 30%;             /* Reduced from 45% to force it to wrap more frequently */
     white-space: normal;
-    text-align: center;           /* Centers the text lines inside its block */
-	transform: translateY(30px);
+    text-align: left;       /* Changed to 'left' to align with the subtitle */
+    transform: translateY(30px);
 }
 
 
