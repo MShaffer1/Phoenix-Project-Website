@@ -116,10 +116,10 @@ h1 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;
     
     position: absolute;
-    left: 40%;              /* Move this to align with the start of your subtitle */
+    left: 55.5%;              /* Move this to align with the start of your subtitle */
     width: 30%;             /* Reduced from 45% to force it to wrap more frequently */
     white-space: normal;
-    text-align: left;       /* Changed to 'left' to align with the subtitle */
+    text-align: center;       /* Changed to 'left' to align with the subtitle */
     transform: translateY(30px);
 }
 
@@ -221,12 +221,13 @@ h1 {
     box-shadow: 0 0 25px rgba(244, 194, 211, 0.5);
 }
 
-/* Responsive Media Grid - Forces 3 Columns Across Wide Screens */
+/* Responsive Media Grid - Stacks on mobile, 3 columns on desktop */
 .media-grid {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important; /* Strictly forces a 3-column horizontal alignment */
     gap: 60px; 
     width: 100%;
+    /* This allows the grid to adapt to any screen size automatically */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
 }
 
 /* Base Card Styles */
