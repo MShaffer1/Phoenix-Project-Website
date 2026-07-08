@@ -541,3 +541,22 @@ li {
     .archive-item { flex-direction: column; gap: 15px; }
     .archive-thumb { width: 100%; height: 160px; }
 }
+/* --- Mobile Analytics Logic --- */
+
+/* By default, the mobile-only block in your left-col is hidden */
+.mobile-analytics {
+    display: none;
+}
+
+/* On screens 768px or smaller, toggle visibility */
+@media (max-width: 768px) {
+    /* Show the mobile-only section */
+    .mobile-analytics {
+        display: block;
+    }
+    
+    /* Hide the original sidebar */
+    #sidebar-analytics {
+        display: none;
+    }
+}
