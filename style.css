@@ -108,20 +108,21 @@ h1 {
 
 /* The Technical Tagline */
 .tech-tag {
-    font-size: clamp(0.75rem, 1.4vw, 0.95rem); 
+    /* Existing Styling */
+    font-size: clamp(0.75rem, 4vw, 0.95rem); /* Increased 1.4vw to 4vw for mobile readability */
     letter-spacing: 2px;
     font-weight: 600;
     line-height: 1.5;
-    color: #fcfaf2; 
-    
+    color: #fcfaf2;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;
-    
-    position: absolute;
-    left: 52%;                    /* Pushes the starting point out */
-    width: 45%;                   /* Limits the width so it wraps beautifully */
+    text-align: center;
     white-space: normal;
-    text-align: center;           /* Centers the text lines inside its block */
-	transform: translateY(30px);
+
+    /* Responsive Positioning */
+    margin: 30px auto 0 auto; /* Replaces absolute positioning/translateY */
+    width: 90%;              /* Uses 90% of screen on mobile */
+    max-width: 600px;        /* Caps it on larger screens */
+    display: block;
 }
 
 
