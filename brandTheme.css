@@ -279,7 +279,14 @@ li {
         background-size: cover;
         background-position: center;
         /* Ensures the header has enough height to show the image */
-        min-height: 150px; 
+        min-height: 150px;
+		/* ADD THIS TO CENTER THE TITLE ON MOBILE: */
+        flex-direction: column;
+        text-align: center;
+    }
+	.brand-title {
+        /* This ensures the title centers perfectly within the column */
+        margin: 0 auto;
     }
 }
 
