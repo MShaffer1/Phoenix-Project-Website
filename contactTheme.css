@@ -1,0 +1,72 @@
+/* Only unique form and layout overrides */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+label {
+    color: #C5A028;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 12px;
+    color: #f5f6fa;
+    font-family: 'Inter', sans-serif;
+    font-size: 10.5pt;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ea2a6f;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 8px rgba(234, 42, 111, 0.2);
+}
+
+.submit-btn {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #ffffff;
+    background-color: #ea2a6f;
+    border: 2px solid #ea2a6f;
+    padding: 12px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #000000;
+    box-shadow: 0 0 15px rgba(234, 42, 111, 0.4);
+}
+
+/* Specific sidebar override if different from other pages */
+.right-col {
+    flex: 1; 
+    min-width: 280px;
+    background-color: #FAFAFA; 
+    border-top: 4px solid #FF6B8B; 
+    border-bottom: 4px solid #D4AF37; 
+    padding: 25px;
+    border-radius: 4px;
+    height: fit-content;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
