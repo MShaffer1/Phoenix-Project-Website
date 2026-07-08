@@ -117,7 +117,7 @@ h1 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;
     
     position: absolute;
-    left: 50%;                    /* Pushes the starting point out */
+    left: 52%;                    /* Pushes the starting point out */
     width: 45%;                   /* Limits the width so it wraps beautifully */
     white-space: normal;
     text-align: center;           /* Centers the text lines inside its block */
@@ -195,28 +195,30 @@ h1 {
 /* Left & Right Buttons: Elegant transparent frames */
 .mission-btn,
 .contact-btn {
-    background-color: transparent;
-    border: 2px solid #ea2a6f; 
+    background-color: #f72585;
+    border: 2px solid #CA075F;
     color: #ffffff;
+    box-shadow: 0 0 20px rgba(244, 194, 211, 0.5);
 }
 
 .mission-btn:hover,
 .contact-btn:hover {
-    background-color: #f72585;
-    box-shadow: 0 0 12px rgba(244, 194, 211, 0.5);
+    background-color: transparent;
+    border-color: #ea2a6f;
+    box-shadow: 0 0 25px rgba(244, 194, 211, 0.5);
 }
 
 /* Center Master CTA Button: Vibrant solid accent to draw the eye */
 .explore-btn {
     background-color: #f72585;
-    border: 2px solid #f72585;
+    border: 2px solid #CA075F;
     color: #ffffff;
     box-shadow: 0 0 20px rgba(244, 194, 211, 0.5);
 }
 
 .explore-btn:hover {
-    background-color: #000000;
-    border-color: #ea2a6f;
+    background-color: transparent;
+    border-color: #CA075F;
     box-shadow: 0 0 25px rgba(244, 194, 211, 0.5);
 }
 
@@ -282,7 +284,7 @@ h1 {
 .media-caption {
 	font-family: Inter;
     font-size: 1rem;
-    color: #F594BB;
+    color: #FFFFFF;
     line-height: 1.5;
 	letter-spacing: 2;
     margin: 15px 0 0 0;
@@ -376,4 +378,3 @@ h1 {
     /* --- THE FIX --- */
     margin: 10px 60px !important; /* The 60px forces a massive 120px total canyon of space between them */
 }
-
