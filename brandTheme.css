@@ -13,10 +13,9 @@ body {
 
 /* Modern Web Wrapper */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-	padding-left: 20px;
-	padding-right: 20px;
+    width: 80%;          /* Uses 80% of screen width on small screens */
+    max-width: 1500px;   /* Won't grow past 1500px on your big monitor */
+    margin: 0 auto;	
 }
 
 /* Responsive Header Bar styled in Brand Pink & Gold */
