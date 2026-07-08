@@ -24,7 +24,7 @@ body {
                 rgba(0, 0, 0, 0) 30%, 
                 rgba(0, 0, 0, 0) 70%, 
                 rgba(0, 0, 0, 0.8) 100%), 
-                url('Transparent Phoenix.png') no-repeat center 20%;
+                url('images/Transparent Phoenix.png') no-repeat center 20%;
     background-size: cover;
     padding: 30px 20px; 
     margin-bottom: 30px;
@@ -56,7 +56,7 @@ body {
     flex-wrap: wrap;
 }
 
-.brand-url {
+.page-title {
     font-family: 'Inter', sans-serif;
     font-size: 14pt; 
     font-weight: 600;
@@ -88,6 +88,27 @@ body {
 .home-btn:hover {
     background-color: #000000;
     box-shadow: 0 0 15px rgba(234, 42, 111, 0.4);
+}
+
+/* Navigation Button Styling */
+.nav-btn {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #ea2a6f;
+    border: 2px solid #ea2a6f;
+    padding: 10px 24px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #000000;
+    box-shadow: 0 0 15px rgba(234, 42, 111, 0.4);
+    color: #ffffff;
 }
 
 .main-title {
@@ -277,4 +298,187 @@ li {
         flex-direction: column;
         gap: 15px;
     }
+}
+
+/* Styling to blend the CTA beautifully with your brand identity */
+    .contact-cta-link {
+        display: inline-block;
+        margin-top: 15px;
+        font-family: 'Inter', sans-serif;
+        font-size: 11pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #ea2a6f; /* Signature Pink */
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .contact-cta-link:hover {
+        color: #f5f6fa; /* Transitions to Off-White just like the footer */
+        text-shadow: 0 0 8px rgba(245, 246, 250, 0.4);
+        transform: translateX(3px); /* Subtle nudge animation forward */
+    }
+	
+	/* Featured Story Hero Section */
+
+.featured-hero {
+    display: flex;
+    gap: 30px;
+    background: #111;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    align-items: flex-start; /* Aligns content to the top for better balance */
+}
+
+
+.hero-img {
+    width: 50%; 
+    max-height: 400px; /* Made slightly taller to show off the art */
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+.hero-content {
+    width: 40%;
+    flex: 0 0 40%; /* Prevents the text from growing */
+}
+
+/* Stories Grid */
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.story-card {
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.section-heading {
+    color: #D4AF37;
+    margin-top: 40px;
+    border-bottom: 2px solid #ea2a6f;
+    padding-bottom: 10px;
+}
+
+/* Styling the "Read More" links to match your brand */
+.read-more-link {
+    display: inline-block;
+    color: #ea2a6f; /* Your signature brand pink */
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.read-more-link:hover {
+    color: #f5f6fa; /* Changes to off-white on hover */
+    text-shadow: 0 0 8px rgba(245, 246, 250, 0.4);
+}
+
+/* Fix for Back Links */
+.back-link {
+    display: inline-block;
+    color: #ea2a6f; 
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+}
+
+.back-link:hover {
+    color: #f5f6fa; 
+    text-shadow: 0 0 8px rgba(245, 246, 250, 0.4);
+}
+
+.post-footer-nav {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+/* Archive List Layout */
+.archive-list { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 25px; 
+}
+
+.archive-item { 
+    display: flex; 
+    gap: 25px; 
+    background: rgba(255, 255, 255, 0.02); 
+    border: 1px solid rgba(255, 255, 255, 0.05); 
+    padding: 20px; 
+    border-radius: 4px; 
+    transition: border-color 0.3s ease; 
+}
+
+.archive-item:hover { 
+    border-color: #ea2a6f; 
+}
+
+.archive-thumb { 
+    width: 180px; 
+    height: 120px; 
+    background-color: #111; 
+    border-radius: 4px; 
+    object-fit: cover; 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    flex-shrink: 0; 
+}
+
+.archive-details { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+.archive-meta { 
+    font-size: 0.85rem; 
+    color: #C5A028; /* Restored Gold */
+    font-weight: 600; 
+    text-transform: uppercase; 
+    margin-bottom: 5px; 
+}
+
+.archive-title { 
+    font-size: 14pt; 
+    margin: 0 0 8px 0; 
+}
+
+.archive-title a { 
+    color: #ffffff; 
+    text-decoration: none; 
+}
+
+.archive-title a:hover { 
+    color: #ea2a6f; /* Restored Pink */
+}
+
+.archive-excerpt { 
+    font-size: 10.5pt; 
+    color: #b3b3b3; 
+    margin: 0; 
+}
+
+@media (max-width: 600px) {
+    .archive-item { flex-direction: column; gap: 15px; }
+    .archive-thumb { width: 100%; height: 160px; }
 }
