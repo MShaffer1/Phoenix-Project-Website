@@ -295,7 +295,7 @@ h1 {
    ========================================== */
 @media (max-width: 768px) {
     .hero {
-        background-image: none !important; 
+        background-image: url('Images/RoundTPPhoenix_large.png') !important; 
         height: auto !important;           
         max-height: none !important;
         overflow-y: auto !important;        
@@ -317,7 +317,7 @@ h1 {
         display: block;
         width: 160px;          
         height: 160px;
-        background-image: url('RoundTPPhoenix.png');
+        background-image: url('Images/RoundTPPhoenix.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
