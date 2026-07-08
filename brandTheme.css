@@ -269,6 +269,18 @@ li {
         width: 100%;
         justify-content: space-between;
     }
+	.web-header {
+        /* Simplifies the background for mobile to ensure it renders */
+        background: linear-gradient(to right, 
+                    rgba(0, 0, 0, 0.9) 0%, 
+                    rgba(0, 0, 0, 0.4) 50%, 
+                    rgba(0, 0, 0, 0.9) 100%), 
+                    url('Images/Transparent Phoenix.png');
+        background-size: cover;
+        background-position: center;
+        /* Ensures the header has enough height to show the image */
+        min-height: 150px; 
+    }
 }
 
 /* Site Footer Structuring & Accent Rules */
