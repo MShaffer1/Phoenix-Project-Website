@@ -324,6 +324,84 @@
     </main>
 
 </div>
+<!-- START REUSABLE FOOTER SECTOR -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <nav class="footer-nav">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="archive.html" class="footer-link">Stories</a>
+            <a href="stories.html" class="footer-link">Weekly Spotlights</a>
+            <a href="about.html" class="footer-link">About</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </nav>
+        <div class="footer-copyright">
+            &copy; 2026 The Phoenix Project. All Rights Reserved.
+        </div>
+    </div>
+</footer>
 
+<style>
+    /* Footer Structuring & Accent Rules */
+    .site-footer {
+        width: 100%;
+        background-color: #000000;
+        border-top: 3px solid #D4AF37; /* Signature Gold Top Border Divider */
+        padding: 30px 20px;
+        margin-top: 60px; /* Forces spacing from content above */
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Links Row Rules */
+    .footer-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px; /* Balanced spacing between nav links */
+    }
+
+    .footer-link {
+        font-family: 'Inter', sans-serif;
+        font-size: 10pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #ea2a6f; /* Rest state changed to Signature Pink */
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    /* Highlight Hover Transitions */
+    .footer-link:hover {
+        color: #f5f6fa; /* Hover state changed to Off-White */
+        text-shadow: 0 0 8px rgba(245, 246, 250, 0.4); /* Glow adjusted to match white hover */
+    }
+
+    .footer-copyright {
+        font-family: 'Inter', sans-serif;
+        font-size: 8.5pt;
+        color: #666666;
+        letter-spacing: 0.5px;
+        margin-top: 5px;
+    }
+
+    /* Responsive scaling rule for mobile views */
+    @media (max-width: 600px) {
+        .footer-nav {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+</style>
+<!-- END REUSABLE FOOTER SECTOR -->
 </body>
 </html>
