@@ -27,7 +27,7 @@ body {
     min-height: 100vh;
     max-height: 100vh;      /* Hard cap to completely eliminate vertical scrolling */
     
-    background-image: url('images/RoundTPPhoenix2.PNG');
+    background-image: url('images/RoundTPPhoenix_large.png');
     background-position: left center;
     background-repeat: no-repeat;
     background-size: 60% auto;  
