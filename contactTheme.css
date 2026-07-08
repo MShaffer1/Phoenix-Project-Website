@@ -70,3 +70,15 @@ textarea:focus {
     height: fit-content;
     box-shadow: 0 2px 10px rgba(0,0,0,0.02);
 }
+
+@media (max-width: 768px) {
+    .content-grid {
+        flex-direction: column; /* Stacks the columns vertically */
+        gap: 30px;
+    }
+    
+    /* Optional: Ensure the right column doesn't look too wide on mobile */
+    .right-col {
+        min-width: 100%;
+    }
+}
