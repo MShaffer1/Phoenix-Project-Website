@@ -266,8 +266,9 @@ li {
         gap: 30px;
     }
     .header-controls {
-        width: 100%;
-        justify-content: space-between;
+       width: 100%;
+        justify-content: center; /* Centers the 'About' title too */
+        margin-top: 10px;
     }
 	.web-header {
         /* Simplifies the background for mobile to ensure it renders */
@@ -282,11 +283,13 @@ li {
         min-height: 150px;
 		/* ADD THIS TO CENTER THE TITLE ON MOBILE: */
         flex-direction: column;
+		align-items: center;
         text-align: center;
     }
 	.brand-title {
         /* This ensures the title centers perfectly within the column */
         margin: 0 auto;
+		display: block;
     }
 }
 
