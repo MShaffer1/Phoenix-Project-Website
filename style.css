@@ -317,7 +317,7 @@ h1 {
         display: block;
         width: 160px;          
         height: 160px;
-        background-image: url('Images/RoundTPPhoenix.png');
+        background-image: none;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
