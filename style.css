@@ -28,9 +28,9 @@ body {
     max-height: 100vh;      /* Hard cap to completely eliminate vertical scrolling */
     
     background-image: url('Images/RoundTPPhoenix_large.png');
-    background-position: left center;
+    background-position: 20% center;
     background-repeat: no-repeat;
-    background-size: 60% auto;  
+    background-size: 55% auto;  
     
     overflow: hidden;       /* Safety net to crop out anything trying to cause a scrollbar */
     box-sizing: border-box;
@@ -96,10 +96,10 @@ h1 {
     font-size: clamp(1.1rem, 1.8vw, 1.35rem); 
     line-height: 1.5;
     color: #F16AA0; 
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 2px 2px 5px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 2px 2px 5px rgba(0, 0, 0, 0.9);
 
     position: absolute;
-    left: 60%;           
+    left: 62%;           
     white-space: nowrap; 
     text-align: center;
 
