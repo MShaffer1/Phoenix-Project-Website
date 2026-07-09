@@ -106,24 +106,37 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Ensure the banner image fits the content width */
-.main-banner-img {
-    float: left;
-	display: block;      /* Removes extra space below the image */
-    width: 31%;         /* Forces the image to fill the width of the article container */
-    max-width: 800px;    /* Optional: Prevents it from getting too large on wide desktop screens */
-    height: auto;        /* Keeps the image from stretching/distorting */
-     margin: 54px 2% 30px 0;
-    border-radius: 8px;  /* Optional: Adds a nice soft corner to your photos */
+
+.hero-image {
+    float: left;            /* Pushes image to the left */
+    width: 40%;             /* Adjust width as needed */
+    max-width: 400px;
+    margin-right: 20px;     /* Keeps text from touching the image */
+    margin-bottom: 10px;	/* Keeps text from touching the bottom of image */
+	margin-top: 10px;    
+    height: auto;
+    border-radius: 8px;
 }
 
+/* Add this to make sure your blockquote doesn't get messed up by the float */
+.article-blockquote {
+    clear: both;            /* This forces the blockquote to start BELOW the image */
+    margin-top: 25px;
+}
+
+/* Ensure the article body clears any floats to stay organized */
 .article-body {
-	float: left;
-	width: 66%;
-	margin: 30px 0;
-	padding-top: 20px;
+    width: 100%;
+    margin: 30px 0;
+    padding-top: 20px;
 }
 
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+    .article-hero-flex {
+        flex-direction: column; /* Stacks image on top of text on phones */
+    }
+}
 .nav-btn:hover {
     background-color: #000000;
     box-shadow: 0 0 15px rgba(234, 42, 111, 0.4);
