@@ -568,6 +568,16 @@ li {
     margin: 0; 
 }
 
+.archive-header {
+    margin-bottom: 30px;
+
+}
+
+.archive-list {
+    padding-left: 0; 
+    padding-right: 0;
+}
+
 @media (max-width: 600px) {
     .archive-item { flex-direction: column; gap: 15px; }
     .archive-thumb { width: 100%; height: 160px; }
