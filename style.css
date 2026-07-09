@@ -123,6 +123,21 @@ h1 {
     transform: translateY(30px);
 }
 
+/* Clean replacement for the inline HR style */
+.section-divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 40px 0;
+}
+
+/* Ensure the expansion-container layout is strictly controlled by CSS */
+.expansion-container {
+    max-width: 1700px; /* Limits the width for ultra-wide screens */
+    width: 90%;        /* Keeps it responsive on smaller screens */
+    margin: 10px auto 60px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
 
 /* ==========================================
    GLOBAL EXPANSION SECTION STYLING (Universal Desktop Rules)
@@ -143,7 +158,67 @@ h1 {
     margin-bottom: 1.5rem; 
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;
 }
+ /* Footer Structuring & Accent Rules */
+    .site-footer {
+        width: 100%;
+        background-color: #000000;
+        border-top: 3px solid #D4AF37; /* Signature Gold Top Border Divider */
+        padding: 30px 20px;
+        margin-top: 60px; /* Forces spacing from content above */
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+    }
 
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Links Row Rules */
+    .footer-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px; /* Balanced spacing between nav links */
+    }
+
+    .footer-link {
+        font-family: 'Inter', sans-serif;
+        font-size: 10pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #ea2a6f; /* Rest state changed to Signature Pink */
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    /* Highlight Hover Transitions */
+    .footer-link:hover {
+        color: #f5f6fa; /* Hover state changed to Off-White */
+        text-shadow: 0 0 8px rgba(245, 246, 250, 0.4); /* Glow adjusted to match white hover */
+    }
+
+    .footer-copyright {
+        font-family: 'Inter', sans-serif;
+        font-size: 8.5pt;
+        color: #666666;
+        letter-spacing: 0.5px;
+        margin-top: 5px;
+    }
+
+    /* Responsive scaling rule for mobile views */
+    @media (max-width: 600px) {
+        .footer-nav {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+	
 /* Side-by-Side Horizontal Button Layout */
 .expansion-buttons {
     display: flex;
@@ -295,7 +370,7 @@ h1 {
    ========================================== */
 @media (max-width: 768px) {
     .hero {
-        background-image: none !important; 
+        background-image: url('Images/RoundTPPhoenix_large.png') !important; 
         height: auto !important;           
         max-height: none !important;
         overflow-y: auto !important;        
@@ -313,14 +388,14 @@ h1 {
     }
 
     .hero-overlay::before {
-		background-image: url('Images/RoundTPPhoenix.png') !important;
-		background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
         content: "";
         display: block;
         width: 160px;          
-        height: 160px;                
+        height: 160px;
+        background-image: none;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
         margin-top: 30px;      
         margin-bottom: 10px;   
     }
