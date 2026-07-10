@@ -28,7 +28,7 @@ body {
     max-height: 100vh;      /* Hard cap to completely eliminate vertical scrolling */
     
     background-image: url('Images/RoundTPPhoenix_large.png');
-    background-position: 20% center;
+    background-position: 10% center;
     background-repeat: no-repeat;
     background-size: 55% auto;  
     
@@ -38,18 +38,30 @@ body {
 }
 
 .hero-overlay {
-    background: transparent; 
-    padding: 40px; 
-    text-align: right; 
-    color: white;
-    max-width: 75%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* This aligns everything to the left side of your container */
     align-items: flex-start; 
-    margin-top: 0;
-    text-align: left;
-    max-height: 95vh;
+    padding-right: 0 5%; /* This keeps it a percentage from the left, which is responsive */
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* This sets a consistent gap between all text elements */
+	align-items: center;
+	text-align: center;
+	/* This pushes the whole group to the right (50% from the left) */
+    margin-left: 5%; 
+	
+    
+}
+
+.subtitle, .tech-tag .mission-inline .h1{
+    position: static; /* Removes absolute positioning drift */
+    width: 100%;
+    margin: 0%;
 }
 
 /* Main Title */
@@ -60,11 +72,6 @@ h1 {
     color: #f72585; 
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.95), 0 0 8px #D4AF37;
     line-height: 1.1;
-
-    position: absolute;
-    left: 55%; 
-    transform: translateY(-130px);
-    text-align: left; 
 }
 
 /* Subtitle */
@@ -73,37 +80,22 @@ h1 {
     font-size: clamp(1.1rem, 2.2vw, 1.6rem); 
     font-weight: normal;
     color: #fcfaf2;
-    margin-bottom: 1.5rem; 
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;
-    line-height: 1.4;
-
-    position: absolute;
-    left: 52%;           
+    line-height: 1.4;      
     white-space: nowrap; 
-    text-align: left;    
-
-    transform: translateY(-60px); 
-}
-
-/* Unified Mission Block Container */
-.mission-inline {
-    width: 100%;
+   
 }
 
 /* The Quote Text */
-.mission-inline p {
+.mission-inline {
     font-style: italic;
     font-size: clamp(1.1rem, 1.8vw, 1.35rem); 
     line-height: 1.5;
     color: #F16AA0; 
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 2px 2px 5px rgba(0, 0, 0, 0.9);
-
-    position: absolute;
-    left: 62%;           
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 2px 2px 5px rgba(0, 0, 0, 0.9);      
     white-space: nowrap; 
-    text-align: center;
 
-    transform: translateY(-30px); 
+
 }
 
 /* The Technical Tagline */
@@ -113,14 +105,10 @@ h1 {
     font-weight: 600;
     line-height: 1.5;
     color: #fcfaf2; 
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;
-    
-    position: absolute;
-    left: 55.5%;              /* Move this to align with the start of your subtitle */
-    width: 30%;             /* Reduced from 45% to force it to wrap more frequently */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;  
+    max-width: 70%;
     white-space: normal;
-    text-align: center;       /* Changed to 'left' to align with the subtitle */
-    transform: translateY(30px);
+    text-align: center; /* Changed from center to left for better alignment consistency */
 }
 
 /* Clean replacement for the inline HR style */
@@ -238,8 +226,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px; /* Adjust this number to evenly space all 3 buttons closer together or further apart */
-    margin-top: 10px;
+    gap: 40px; /* Adjust this number to evenly space all 3 buttons closer together or further apart */
+    margin-top: 5px;
     margin-bottom: 35px; 
     flex-wrap: wrap;
     width: 100%; 
@@ -370,16 +358,17 @@ h1 {
    ========================================== */
 @media (max-width: 768px) {
     .hero {
-        background-image: url('Images/RoundTPPhoenix_large.png') !important; 
-        height: auto !important;           
+        background-image: none !important; 
+        height: auto !important;            
+        min-height: auto !important;    /* <--- ADD THIS: Stops the container from forcing full-screen height */
         max-height: none !important;
-        overflow-y: auto !important;        
+        overflow-y: visible !important; /* <--- Changed from auto to visible to avoid unnecessary scrollbars */
     }
 
     .hero-overlay {
         max-width: 100%;
         width: 100%;
-        padding: 20px;
+        padding: 0 20px 30px 20px;
         align-items: center;    
         justify-content: flex-start;
         text-align: center;
@@ -392,11 +381,11 @@ h1 {
         display: block;
         width: 160px;          
         height: 160px;
-        background-image: none;
+        background-image: url('Images/RoundTPPhoenix_large.png') !important; 
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        margin-top: 30px;      
+        margin-top: 20px;      
         margin-bottom: 10px;   
     }
 
@@ -434,14 +423,20 @@ h1 {
         padding: 0 !important;       /* REMOVED the 75% padding that was breaking it */
         white-space: normal !important;
     }
-
+	
+/* Add this reset for the new container */
+    .text-group {
+        margin-left: 0 !important; /* Forces the block back to center */
+        width: 100% !important;    /* Allows it to fill the mobile container */
+        max-width: 100% !important;
+    }
 
     .cta-button {
         display: inline-block;
         width: auto;
         max-width: 90%;
         white-space: nowrap !important; 
-        margin-bottom: 50px; 
+        margin-bottom: 10px; 
     }
 	
 }
