@@ -13,7 +13,7 @@
 
 body { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    line-height: 1.6; 
+    line-height: 1.5; 
     color: #333; 
     background-color: #000000;
 }
@@ -49,19 +49,17 @@ body {
 .text-group {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* This sets a consistent gap between all text elements */
+    gap: 15px; /* This sets a consistent gap between all text elements */
 	align-items: center;
 	text-align: center;
 	/* This pushes the whole group to the right (50% from the left) */
-    margin-left: 5%; 
-	
-    
+    margin-left: 5%;    
 }
 
 .subtitle, .tech-tag .mission-inline .h1{
     position: static; /* Removes absolute positioning drift */
     width: 100%;
-    margin: 0%;
+	margin: 0;
 }
 
 /* Main Title */
@@ -80,22 +78,18 @@ h1 {
     font-size: clamp(1.1rem, 2.2vw, 1.6rem); 
     font-weight: normal;
     color: #fcfaf2;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;
-    line-height: 1.4;      
-    white-space: nowrap; 
-   
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;      
+    white-space: nowrap;
 }
 
 /* The Quote Text */
 .mission-inline {
     font-style: italic;
     font-size: clamp(1.1rem, 1.8vw, 1.35rem); 
-    line-height: 1.5;
     color: #F16AA0; 
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 2px 2px 5px rgba(0, 0, 0, 0.9);      
     white-space: nowrap; 
-
-
+	margin-bottom: 10px;
 }
 
 /* The Technical Tagline */
@@ -103,7 +97,6 @@ h1 {
     font-size: clamp(0.75rem, 1.4vw, 0.95rem); 
     letter-spacing: 2px;
     font-weight: 600;
-    line-height: 1.5;
     color: #fcfaf2; 
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;  
     max-width: 70%;
@@ -389,14 +382,18 @@ h1 {
         margin-bottom: 10px;   
     }
 
-    h1, .subtitle, .mission-inline p, .tech-tag, .cta-button {
+    h1, .subtitle, .tech-tag, .cta-button {
         position: relative !important;
         left: 0 !important;
         transform: none !important;
         text-align: center !important;
         white-space: normal !important; 
-        margin-bottom: 20px;            
+        margin-bottom: 0px;            
     }
+	
+	.mission-inline: {
+		margin-bottom: 5px;
+	}
 
     h1 {
         font-size: 3.2rem; 
@@ -405,7 +402,7 @@ h1 {
 
     .subtitle {
         font-size: 1.15rem;
-        margin-bottom: 25px;
+        margin-bottom: 5px;
     }
 
     .mission-inline p {
@@ -418,7 +415,7 @@ h1 {
         left: 0 !important;
         transform: none !important;
         width: 90% !important;       /* Lets it fill 90% of the mobile screen */
-        margin: 0 auto 20px auto !important; /* Centers it and adds bottom spacing */
+        margin: 0 auto 10px auto !important; /* Centers it and adds bottom spacing */
         text-align: center !important;
         padding: 0 !important;       /* REMOVED the 75% padding that was breaking it */
         white-space: normal !important;
