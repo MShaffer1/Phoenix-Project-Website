@@ -1,4 +1,4 @@
-/* 1. Import Great Vibes Font */
+/* 1. Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bilbo:wght@400;700&display=swap');
@@ -23,7 +23,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end; 
-    height: 100vh;          /* Force it to strictly lock to 100% viewport height */
+    height: 100vh;           /* Force it to strictly lock to 100% viewport height */
     min-height: 100vh;
     max-height: 100vh;      /* Hard cap to completely eliminate vertical scrolling */
     
@@ -41,25 +41,23 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* This aligns everything to the left side of your container */
     align-items: flex-start; 
-    padding-right: 0 5%; /* This keeps it a percentage from the left, which is responsive */
+    padding-right: 0 5%;
 }
 
 .text-group {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* This sets a consistent gap between all text elements */
-	align-items: center;
-	text-align: center;
-	/* This pushes the whole group to the right (50% from the left) */
+    gap: 15px; 
+    align-items: center;
+    text-align: center;
     margin-left: 5%;    
 }
 
-.subtitle, .tech-tag .mission-inline .h1{
-    position: static; /* Removes absolute positioning drift */
+.subtitle, .tech-tag, .mission-inline, .h1 {
+    position: static; 
     width: 100%;
-	margin: 0;
+    margin: 0;
 }
 
 /* Main Title */
@@ -89,7 +87,7 @@ h1 {
     color: #F16AA0; 
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 2px 2px 5px rgba(0, 0, 0, 0.9);      
     white-space: nowrap; 
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 /* The Technical Tagline */
@@ -101,7 +99,7 @@ h1 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;  
     max-width: 70%;
     white-space: normal;
-    text-align: center; /* Changed from center to left for better alignment consistency */
+    text-align: center;
 }
 
 /* Clean replacement for the inline HR style */
@@ -111,23 +109,12 @@ h1 {
     margin: 40px 0;
 }
 
-/* Ensure the expansion-container layout is strictly controlled by CSS */
+/* Global Expansion Section Styling */
 .expansion-container {
-    max-width: 1700px; /* Limits the width for ultra-wide screens */
-    width: 90%;        /* Keeps it responsive on smaller screens */
-    margin: 10px auto 60px auto;
-    padding: 0 40px;
-    box-sizing: border-box;
-}
-
-/* ==========================================
-   GLOBAL EXPANSION SECTION STYLING (Universal Desktop Rules)
-   ========================================== */
-.expansion-container {
-    max-width: 90%; /* Pushes the layout way out toward the screen edges */
-    width: 1700px;  /* Gives it an ultra-wide ceiling to scale beautifully on large monitors */
+    max-width: 1700px; 
+    width: 90%;        
     margin: 10px auto 60px auto; 
-    padding: 0 40px; /* Slightly wider internal breathing room */
+    padding: 0 40px; 
     box-sizing: border-box;
 }
 
@@ -139,98 +126,71 @@ h1 {
     margin-bottom: 1.5rem; 
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;
 }
- /* Footer Structuring & Accent Rules */
-    .site-footer {
-        width: 100%;
-        background-color: #000000;
-        border-top: 3px solid #D4AF37; /* Signature Gold Top Border Divider */
-        padding: 30px 20px;
-        margin-top: 60px; /* Forces spacing from content above */
-        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
-    }
 
-    .footer-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    /* Links Row Rules */
-    .footer-nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 30px; /* Balanced spacing between nav links */
-    }
-
-    .footer-link {
-        font-family: 'Inter', sans-serif;
-        font-size: 10pt;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: #ea2a6f; /* Rest state changed to Signature Pink */
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-
-    /* Highlight Hover Transitions */
-    .footer-link:hover {
-        color: #f5f6fa; /* Hover state changed to Off-White */
-        text-shadow: 0 0 8px rgba(245, 246, 250, 0.4); /* Glow adjusted to match white hover */
-    }
-
-    .footer-copyright {
-        font-family: 'Inter', sans-serif;
-        font-size: 8.5pt;
-        color: #666666;
-        letter-spacing: 0.5px;
-        margin-top: 5px;
-    }
-
-    /* Responsive scaling rule for mobile views */
-    @media (max-width: 600px) {
-        .footer-nav {
-            flex-direction: column;
-            gap: 15px;
-        }
-    }
-	
-/* Side-by-Side Horizontal Button Layout */
-.expansion-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 35px; 
-    flex-wrap: wrap;
+/* Footer Structuring & Accent Rules */
+.site-footer {
     width: 100%;
+    background-color: #000000;
+    border-top: 3px solid #D4AF37;
+    padding: 30px 20px;
+    margin-top: 60px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* ==========================================
-   DEDICATED LOWER BUTTON INHERITANCE MAP
-   ========================================== */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 10pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ea2a6f;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #f5f6fa;
+    text-shadow: 0 0 8px rgba(245, 246, 250, 0.4);
+}
+
+.footer-copyright {
+    font-family: 'Inter', sans-serif;
+    font-size: 8.5pt;
+    color: #666666;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+}
 
 /* Unified Three-Button Layout Container */
 .expansion-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px; /* Adjust this number to evenly space all 3 buttons closer together or further apart */
+    gap: 40px;
     margin-top: 5px;
     margin-bottom: 35px; 
     flex-wrap: wrap;
     width: 100%; 
 }
 
-/* ==========================================
-   DEDICATED LOWER BUTTON INHERITANCE MAP
-   ========================================== */
-
-/* Shared baseline properties for all three lower buttons */
+/* Shared baseline properties for lower buttons */
 .expansion-btn {
     display: inline-block;
     font-family: 'Inter', sans-serif;
@@ -243,27 +203,11 @@ h1 {
     white-space: nowrap;
     transition: all 0.3s ease;
     box-sizing: border-box;
-	box-shadow: 0 0 12px rgba(244, 194, 211, 0.5);
-	transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(244, 194, 211, 0.5);
 }
 
-/* Left & Right Buttons: Elegant transparent frames */
 .mission-btn,
-.contact-btn {
-    background-color: #f72585;
-    border: 2px solid #CA075F;
-    color: #ffffff;
-    box-shadow: 0 0 20px rgba(244, 194, 211, 0.5);
-}
-
-.mission-btn:hover,
-.contact-btn:hover {
-    background-color: transparent;
-    border-color: #ea2a6f;
-    box-shadow: 0 0 25px rgba(244, 194, 211, 0.5);
-}
-
-/* Center Master CTA Button: Vibrant solid accent to draw the eye */
+.contact-btn,
 .explore-btn {
     background-color: #f72585;
     border: 2px solid #CA075F;
@@ -271,9 +215,11 @@ h1 {
     box-shadow: 0 0 20px rgba(244, 194, 211, 0.5);
 }
 
+.mission-btn:hover,
+.contact-btn:hover,
 .explore-btn:hover {
     background-color: transparent;
-    border-color: #CA075F;
+    border-color: #ea2a6f;
     box-shadow: 0 0 25px rgba(244, 194, 211, 0.5);
 }
 
@@ -282,7 +228,6 @@ h1 {
     display: grid !important;
     gap: 60px; 
     width: 100%;
-    /* This allows the grid to adapt to any screen size automatically */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
 }
 
@@ -294,36 +239,34 @@ h1 {
     padding: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px); 
-    width: 100%; /* Ensures cards stretch to fill their grid column */
+    width: 100%;
 }
 
 .media-card h3 {
     font-family: Inter;
-	color: #D4AF37;
-	font-size: 1.5rem;
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 6px #F9BED5;
-	
+    color: #D4AF37;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 6px #F9BED5;
 }
 
 .video-container {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;     /* Modern, clean way to force a 16:9 box */
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 4px;
     background: #000;
 }
 
-/* 1. Dedicated styles for your video player */
 .video-container video {
     width: 100%;
     height: 100%;
     object-fit: contain;
-	background-color: #000000; /*Black background */
+    background-color: #000000;
     border-radius: 4px;
-	display: block;
+    display: block;
 }
-/* 2. Dedicated styles for your grid image cards */
+
 .grid-image {
     position: relative; 
     width: 100%;
@@ -333,18 +276,12 @@ h1 {
     border-radius: 4px;
 }
 
-.grid-image {
-    position: relative; 
-    height: auto;
-    aspect-ratio: 16 / 9;
-}
-
 .media-caption {
-	font-family: Inter;
+    font-family: Inter;
     font-size: 1rem;
     color: #FFFFFF;
     line-height: 1.5;
-	letter-spacing: 2;
+    letter-spacing: 2px;
     margin: 15px 0 0 0;
 }
 
@@ -352,7 +289,6 @@ h1 {
    FEATURED VIDEO CAROUSEL STYLES (Single-Card Deck)
    ========================================== */
 
-/* Outer Section Title & Subtitle */
 .section-title {
   font-family: 'Lucida Calligraphy', 'Apple Chancery', cursive;
   font-size: clamp(1.3rem, 2.5vw, 1.8rem);
@@ -373,15 +309,17 @@ h1 {
 /* Card container holding the scroll track and overlay arrows */
 .carousel-card-wrapper {
   position: relative;
-  overflow: hidden;
-  display: flex;
+  overflow: hidden !important;
+  display: flex !important;
   align-items: center;
 }
 
 /* Track holds video slides stacked horizontally inside ONE card width */
 .single-card-track {
-  display: flex;
-  overflow-x: auto;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   width: 100%;
@@ -393,9 +331,10 @@ h1 {
   display: none; /* Hide scrollbar Chrome/Safari */
 }
 
-/* Each slide fills 100% of the single card slot */
+/* Each slide fills 100% of the single card slot without shrinking or wrapping */
 .carousel-slide {
-  flex: 0 0 100%;
+  flex: 0 0 100% !important;
+  min-width: 100% !important;
   width: 100%;
   scroll-snap-align: start;
   box-sizing: border-box;
@@ -430,7 +369,6 @@ h1 {
   box-shadow: 0 0 15px rgba(247, 37, 133, 0.6);
 }
 
-/* Button Positioning Inside/Over Card Edges */
 .carousel-card-wrapper .prev-btn { 
   left: 8px; 
 }
@@ -440,15 +378,15 @@ h1 {
 }
 
 /* ==========================================
-   --- MOBILE MODIFIER ---
+   MOBILE MEDIA QUERY
    ========================================== */
 @media (max-width: 768px) {
     .hero {
         background-image: none !important; 
         height: auto !important;            
-        min-height: auto !important;    /* <--- ADD THIS: Stops the container from forcing full-screen height */
+        min-height: auto !important;
         max-height: none !important;
-        overflow-y: visible !important; /* <--- Changed from auto to visible to avoid unnecessary scrollbars */
+        overflow-y: visible !important;
     }
 
     .hero-overlay {
@@ -484,9 +422,9 @@ h1 {
         margin-bottom: 0px;            
     }
 	
-	.mission-inline: {
-		margin-bottom: 5px;
-	}
+    .mission-inline {
+        margin-bottom: 5px;
+    }
 
     h1 {
         font-size: 3.2rem; 
@@ -502,22 +440,22 @@ h1 {
         font-size: 1.1rem;
         margin-bottom: 15px;
     }
-	.tech-tag {
+
+    .tech-tag {
         display: block !important;
         position: relative !important;
         left: 0 !important;
         transform: none !important;
-        width: 90% !important;       /* Lets it fill 90% of the mobile screen */
-        margin: 0 auto 10px auto !important; /* Centers it and adds bottom spacing */
+        width: 90% !important;
+        margin: 0 auto 10px auto !important;
         text-align: center !important;
-        padding: 0 !important;       /* REMOVED the 75% padding that was breaking it */
+        padding: 0 !important;
         white-space: normal !important;
     }
 	
-/* Add this reset for the new container */
     .text-group {
-        margin-left: 0 !important; /* Forces the block back to center */
-        width: 100% !important;    /* Allows it to fill the mobile container */
+        margin-left: 0 !important;
+        width: 100% !important;    
         max-width: 100% !important;
     }
 
@@ -528,16 +466,18 @@ h1 {
         white-space: nowrap !important; 
         margin-bottom: 10px; 
     }
-	
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
-/* Force aggressive left/right separation directly on the individual buttons */
+
 .expansion-buttons .cta-button, 
 .expansion-buttons .secondary-btn {
     position: relative !important;
     left: auto !important;
     transform: none !important;
     padding: 14px 35px;
-    
-    /* --- THE FIX --- */
-    margin: 10px 60px !important; /* The 60px forces a massive 120px total canyon of space between them */
+    margin: 10px 60px !important;
 }
