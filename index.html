@@ -13,14 +13,14 @@
     <meta property="og:type" content="website" />
 
 	<!-- Favicon & Mobile Icons -->
-<link rel="icon" type="image/x-icon" href="Images/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
-<link rel="manifest" href="Images/site.webmanifest">
+		<link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+		<link rel="manifest" href="Images/site.webmanifest">
 
 	<!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css"> 
+		<link rel="stylesheet" href="style.css"> 
 	
 </head>
 <body>
@@ -50,33 +50,80 @@
         
         <div class="media-grid">
                        
-            <div class="media-card">
-                <h3>Featured Video</h3>
-                <div class="video-container">
-                    <video controls preload="metadata" poster="Images/DiagnosisVid_Thumbnail.jpg">
-						<!--Video Hosted on Cloudflare -->
-                        <source src="https://media.thephoenixproject4k.com/DiagnosisVid_compressed2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <p class="media-caption">A direct look into the platform's vision, journey, and where it all started.</p>
-            </div>
+        <!-- Single-Card Carousel (Far Left Slot) -->
+			  <div class="media-card carousel-card-wrapper">
+				<button class="carousel-btn prev-btn" id="prevBtn" aria-label="Previous Video">&#10094;</button>
 
-            <div class="media-card">
-                <h3>Purposeful Innovation</h3>
-                <img src="Images/ProductTeaserPhoto.jpg" alt="Bioadhesive Matrix Development" class="grid-image">
-                <p class="media-caption">Pioneering specialized delivery systems and bioadhesive matrices designed to protect and support oral tissue healing.</p>
-            </div>
+				<div class="video-carousel single-card-track" id="videoCarousel">
+				  
+				  <!-- Video 1 -->
+				  <div class="carousel-slide">
+					<h3>Diagnosis & First Steps</h3>
+					<div class="video-container">
+					  <video controls preload="metadata" playsinline poster="Images/DiagnosisVid_Thumbnail.jpg">
+						<source src="https://media.thephoenixproject4k.com/DiagnosisVid_compressed2.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					  </video>
+					</div>
+					<p class="media-caption">A direct look into the platform's vision, journey, and where it all started.</p>
+				  </div>
 
-            <div class="media-card">
-                <h3>Platform Spotlight</h3>
-                <img src="Images/LegalShield.jpg" alt="Project Update" class="grid-image">
-                <p class="media-caption">Highlighting the official filing of U.S. Provisional Patent Application No. 63/993,997, establishing strict baseline protections for our bioadhesive delivery system modalities.</p>
-            </div>
+				  <!-- Video 2 -->
+				  <div class="carousel-slide">
+					<h3>Treatment Update</h3>
+					<div class="video-container">
+					  <video controls preload="metadata" playsinline poster="Images/PostBiopsyThumb_Full_withText.JPG">
+						<source src="https://media.thephoenixproject4k.com/PostBiopsyThoughts.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					  </video>
+					</div>
+					<p class="media-caption">My Post-Biopsy Thoughts.</p>
+				  </div>
 
-        </div>
-    </section>
-	
+				  <!-- Video 3 -->
+				  <div class="carousel-slide">
+					<h3>Milestones & Reflections</h3>
+					<div class="video-container">
+					  <video controls preload="metadata" playsinline poster="Images/PostChemo1_24hourslater.jpg">
+						<source src="https://media.thephoenixproject4k.com/PostChemo1_24hours_WithText.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					  </video>
+					</div>
+					<p class="media-caption">How I'm feeling 24 hours after my first chemo treatment.</p>
+				  </div>
+
+					<!-- Video 4 -->
+					  <div class="carousel-slide">
+						<h3>Milestones & Reflections</h3>
+						<div class="video-container">
+						  <video controls preload="metadata" playsinline poster="Images/Week_1_afterTreatment_1_withText.jpg">
+							<source src="https://media.thephoenixproject4k.com/OneWeekPostACTreatment1.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						  </video>
+						</div>
+						<p class="media-caption">One Week Later: Post AC Treatment #1.</p>
+					  </div>
+				</div>
+
+				<button class="carousel-btn next-btn" id="nextBtn" aria-label="Next Video">&#10095;</button>
+			  </div>
+
+	  <!-- Middle Slot -->
+	  <div class="media-card">
+		<h3>Purposeful Innovation</h3>
+		<img src="Images/ProductTeaserPhoto.jpg" alt="Bioadhesive Matrix Development" class="grid-image">
+		<p class="media-caption">Pioneering specialized delivery systems and bioadhesive matrices designed to protect and support oral tissue healing.</p>
+	  </div>
+
+	  <!-- Right Slot -->
+	  <div class="media-card">
+		<h3>Platform Spotlight</h3>
+		<img src="Images/LegalShield.jpg" alt="Project Update" class="grid-image">
+		<p class="media-caption">Highlighting the official filing of U.S. Provisional Patent Application No. 63/993,997, establishing strict baseline protections for our bioadhesive delivery system modalities.</p>
+	  </div>
+
+</div>
+			
 	<!-- START REUSABLE FOOTER SECTOR -->
 <footer class="site-footer">
     <div class="footer-container">
@@ -94,6 +141,9 @@
 </footer>
 
 <!-- END REUSABLE FOOTER SECTOR -->
+
+<!--carousel link -->
+<script src="carousel.js"></script>
 
 </body>
 </html>
