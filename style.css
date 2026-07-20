@@ -318,8 +318,10 @@ h1 {
 .video-container video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+	background-color: #000000; /*Black background */
     border-radius: 4px;
+	display: block;
 }
 /* 2. Dedicated styles for your grid image cards */
 .grid-image {
@@ -344,6 +346,97 @@ h1 {
     line-height: 1.5;
 	letter-spacing: 2;
     margin: 15px 0 0 0;
+}
+
+/* ==========================================
+   FEATURED VIDEO CAROUSEL STYLES (Single-Card Deck)
+   ========================================== */
+
+/* Outer Section Title & Subtitle */
+.section-title {
+  font-family: 'Lucida Calligraphy', 'Apple Chancery', cursive;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: normal;
+  color: #f72585;
+  margin-bottom: 0.25rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;
+}
+
+.section-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #fcfaf2;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+/* Card container holding the scroll track and overlay arrows */
+.carousel-card-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Track holds video slides stacked horizontally inside ONE card width */
+.single-card-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100%;
+  -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+.single-card-track::-webkit-scrollbar {
+  display: none; /* Hide scrollbar Chrome/Safari */
+}
+
+/* Each slide fills 100% of the single card slot */
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+}
+
+/* Arrow Navigation Buttons positioned over the edges of the card */
+.carousel-card-wrapper .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: #D4AF37;
+  border: 1px solid #D4AF37;
+  font-size: 1.2rem;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-card-wrapper .carousel-btn:hover {
+  background: #f72585;
+  color: #ffffff;
+  border-color: #CA075F;
+  box-shadow: 0 0 15px rgba(247, 37, 133, 0.6);
+}
+
+/* Button Positioning Inside/Over Card Edges */
+.carousel-card-wrapper .prev-btn { 
+  left: 8px; 
+}
+
+.carousel-card-wrapper .next-btn { 
+  right: 8px; 
 }
 
 /* ==========================================
