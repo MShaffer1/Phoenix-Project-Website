@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 1. Essential Meta Tags First -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- Termly AutoBlocker MUST run first -->
+    <script type="text/javascript" src="https://app.termly.io/resource-blocker/4562684d-cef8-4691-afdc-edf40e2d1968?autoBlock=on"></script>
+    
+  <!--Google Analytics -->
+   <script src="analytics.js?v=1.1"></script>
+    
+<!-- Favicon & Mobile Icons -->
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="manifest" href="Images/site.webmanifest">
+
+<!--Page title-->	
+    <title>The Phoenix Project</title>
+    
+    <!-- Open Graph / Social Media Preview Tags -->
+    <meta property="og:title" content="The Phoenix Project" />
+    <meta property="og:description" content="Documenting the journey & Pioneering Solutions." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/MShaffer1/Phoenix-Project-Website/refs/heads/main/Images/RoundPhoenix_SolidBackground.jpg" />
+    <meta property="og:url" content="https://github.com/MShaffer1/Phoenix-Project-Website" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header class="hero">
+        <!-- Ko-fi button -->
+        <div class="header-kofi-button">
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+            <script type='text/javascript'>
+                kofiwidget2.init('Support the Project with a Ko-fi', '#e9166a', 'L2J723MSF6');
+                kofiwidget2.draw();
+            </script> 
+        </div>
+    
+        <div class="hero-overlay">
+            <div class="text-group">
+                <h1>The Phoenix Project</h1>
+                <p class="subtitle">Documenting the Journey & Pioneering Solutions</p>
+                <p class="mission-inline">"Healing is a process, not a destination"</p>
+                <div class="tech-tag">Creating a safe space for survivors to share their stories, find honest treatment insights, and champion purposeful health innovations.</div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="expansion-container">
+        
+        <h2 class="expansion-title">Featured Media & Updates</h2>
+        
+        <div class="media-grid">
+                       
+            <!-- Single-Card Carousel (Far Left Slot) -->
+            <div class="media-card carousel-card-wrapper">
+                <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Previous Video">&#10094;</button>
+
+                <div class="video-carousel single-card-track" id="videoCarousel">
+                  
+                  <!-- Video 1 -->
+                  <div class="carousel-slide">
+                    <h3>Diagnosis & First Steps</h3>
+                    <div class="video-container">
+                      <video controls preload="metadata" playsinline poster="Images/DiagnosisVid_Thumbnail.jpg">
+                        <source src="https://media.thephoenixproject4k.com/DiagnosisVid_compressed2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <p class="media-caption">A direct look into the platform's vision, journey, and where it all started.</p>
+                  </div>
+
+                  <!-- Video 2 -->
+                  <div class="carousel-slide">
+                    <h3>Treatment Update</h3>
+                    <div class="video-container">
+                      <video controls preload="metadata" playsinline poster="Images/PostBiopsyThumb_Full_withText.JPG">
+                        <source src="https://media.thephoenixproject4k.com/PostBiopsyThoughts.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <p class="media-caption">My Post-Biopsy Thoughts.</p>
+                  </div>
+
+                  <!-- Video 3 -->
+                  <div class="carousel-slide">
+                    <h3>Milestones & Reflections</h3>
+                    <div class="video-container">
+                      <video controls preload="metadata" playsinline poster="Images/PostChemo1_24hourslater.jpg">
+                        <source src="https://media.thephoenixproject4k.com/PostChemo1_24hours_WithText.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <p class="media-caption">How I'm feeling 24 hours after my first chemo treatment.</p>
+                  </div>
+
+                  <!-- Video 4 -->
+                  <div class="carousel-slide">
+                    <h3>Milestones & Reflections</h3>
+                    <div class="video-container">
+                      <video controls preload="metadata" playsinline poster="Images/Week_1_afterTreatment_1_withText.jpg">
+                        <source src="https://media.thephoenixproject4k.com/OneWeekPostACTreatment1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <p class="media-caption">One Week Later: Post AC Treatment #1.</p>
+                  </div>
+                </div>
+
+                <button class="carousel-btn next-btn" id="nextBtn" aria-label="Next Video">&#10095;</button>
+            </div>
+
+            <!-- Middle Slot -->
+            <div class="media-card">
+                <h3>Purposeful Innovation</h3>
+                <img src="Images/ProductTeaserPhoto.jpg" alt="Bioadhesive Matrix Development" class="grid-image">
+                <p class="media-caption">Pioneering specialized delivery systems and bioadhesive matrices designed to protect and support oral tissue healing.</p>
+            </div>
+
+            <!-- Right Slot -->
+            <div class="media-card">
+                <h3>Platform Spotlight</h3>
+                <img src="Images/LegalShield.jpg" alt="Project Update" class="grid-image">
+                <p class="media-caption">Highlighting the official filing of U.S. Provisional Patent Application No. 63/993,997, establishing strict baseline protections for our bioadhesive delivery system modalities.</p>
+            </div>
+
+        </div>
+    </section>
+            
+    <!-- START REUSABLE FOOTER SECTOR -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+              
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="stories/storyCategories.html" class="footer-link">Stories</a>
+                <a href="teaser/innovation.html" class="footer-link">The Invention</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="https://thephoenixproject.discourse.group" class="footer-link" target="_blank" rel="noopener">Community Forum</a>
+                
+                <div class="footer-kofi-button">
+                    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+                    <script type='text/javascript'>kofiwidget2.init('Support the Project with a Ko-fi', '#E9166A', 'L2J723MSF6');kofiwidget2.draw();</script> 
+                </div>
+            </nav>
+            
+            <!-- Copyright -->
+            <div class="footer-copyright">
+                &copy; 2026 The Phoenix Project. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- END REUSABLE FOOTER SECTOR -->
+
+    <!-- carousel link -->
+    <script src="carousel.js"></script>
+
+</body>
+</html>

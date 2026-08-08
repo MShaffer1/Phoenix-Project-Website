@@ -1,0 +1,436 @@
+/* ==========================================
+   1. FONTS & BASIC RESET
+   ========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600;700&family=Bilbo:wght@400;700&family=Tangerine:wght@400;700&display=swap');
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    line-height: 1.5; 
+    color: #333; 
+    background-color: #000000;
+}
+
+/* ==========================================
+   2. HERO HEADER SECTION
+   ========================================== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    height: 100vh;           /* Strictly lock to 100% viewport height */
+    min-height: 100vh;
+    max-height: 100vh;       /* Hard cap to eliminate vertical scrolling */
+    
+    background-image: url('Images/RoundTPPhoenix_large.webp');
+    background-position: 10% center;
+    background-repeat: no-repeat;
+    background-size: 55% auto;  
+    
+    overflow: hidden;        /* Safety net to crop extra overflow */
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Top-Right Ko-fi Button */
+.header-kofi-button {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 10;
+}
+
+.header-kofi-button .kofi-button {
+    font-size: 0.85rem !important;
+    padding: 6px 14px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header-kofi-button .kofi-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(233, 22, 106, 0.35);
+}
+
+.hero-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    padding-right: 5%; 
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+    margin-left: 5%;    
+}
+
+.subtitle, 
+.tech-tag, 
+.mission-inline, 
+h1 {
+    position: static;
+    width: 100%;
+    margin: 0;
+}
+
+/* Main Title */
+h1 { 
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(3rem, 6vw, 5rem); 
+    margin-bottom: 0.75rem; 
+    color: #f72585; 
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.95), 0 0 8px #D4AF37;
+    line-height: 1.1;
+}
+
+/* Subtitle */
+.subtitle { 
+    font-family: 'Lucida Calligraphy', 'Apple Chancery', cursive;
+    font-size: clamp(1.1rem, 2.2vw, 1.6rem); 
+    font-weight: normal;
+    color: #fcfaf2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;      
+    white-space: nowrap;
+}
+
+/* Quote Text */
+.mission-inline {
+    font-style: italic;
+    font-size: clamp(1.1rem, 1.8vw, 1.35rem); 
+    color: #F16AA0; 
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 2px 2px 5px rgba(0, 0, 0, 0.9);      
+    white-space: nowrap; 
+    margin-bottom: 10px;
+}
+
+/* Technical Tagline */
+.tech-tag {
+    font-size: clamp(0.75rem, 1.4vw, 0.95rem); 
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #fcfaf2; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;  
+    max-width: 70%;
+    white-space: normal;
+    text-align: center;
+}
+
+/* Section Divider */
+.section-divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 40px 0;
+}
+
+/* ==========================================
+   3. EXPANSION CONTAINER & FEATURED MEDIA
+   ========================================== */
+.expansion-container {
+    max-width: 1700px;
+    width: 90%;
+    margin: 20px auto 60px auto; 
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.expansion-title {
+    font-family: 'Lucida Calligraphy', 'Apple Chancery', cursive;
+    font-size: clamp(1.1rem, 2.2vw, 1.6rem); 
+    font-weight: normal;
+    color: #f72585;
+    margin-bottom: 2rem; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;
+    text-align: center; /* Centered title */
+}
+
+/* Responsive Media Grid */
+.media-grid {
+    display: grid !important;
+    gap: 60px; 
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+}
+
+/* Base Card Styles */
+.media-card {
+    background-color: rgba(20, 20, 20, 0.75); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px); 
+    width: 100%;
+}
+
+.media-card h3 {
+    font-family: 'Inter', sans-serif;
+    color: #D4AF37;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 6px #F9BED5;
+    margin-bottom: 12px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #000;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #000000;
+    border-radius: 4px;
+    display: block;
+}
+
+.grid-image {
+    position: relative; 
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.media-caption {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #FFFFFF;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    margin: 15px 0 0 0;
+}
+
+/* ==========================================
+   4. VIDEO CAROUSEL DECK
+   ========================================== */
+.carousel-card-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.single-card-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100%;
+    -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
+    scrollbar-width: none;    /* Hide scrollbar Firefox */
+}
+
+.single-card-track::-webkit-scrollbar {
+    display: none;            /* Hide scrollbar Chrome/Safari */
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+}
+
+.carousel-card-wrapper .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: #D4AF37;
+    border: 1px solid #D4AF37;
+    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-card-wrapper .carousel-btn:hover {
+    background: #f72585;
+    color: #ffffff;
+    border-color: #CA075F;
+    box-shadow: 0 0 15px rgba(247, 37, 133, 0.6);
+}
+
+.carousel-card-wrapper .prev-btn { 
+    left: 8px; 
+}
+
+.carousel-card-wrapper .next-btn { 
+    right: 8px; 
+}
+
+/* ==========================================
+   5. SITE FOOTER STYLING
+   ========================================== */
+.site-footer {
+    width: 100%;
+    background-color: #000000;
+    border-top: 3px solid #D4AF37; /* Signature Gold Top Border Divider */
+    padding: 30px 20px;
+    margin-top: 60px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 10pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ea2a6f;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #f5f6fa;
+    text-shadow: 0 0 8px rgba(245, 246, 250, 0.4);
+}
+
+.footer-copyright {
+    font-family: 'Inter', sans-serif;
+    font-size: 8.5pt;
+    color: #666666;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+}
+
+/* ==========================================
+   6. RESPONSIVE MOBILE STYLES
+   ========================================== */
+@media (max-width: 768px) {
+    .hero {
+        background-image: none !important; 
+        height: auto !important;            
+        min-height: auto !important; 
+        max-height: none !important;
+        overflow-y: visible !important;
+    }
+
+    .header-kofi-button {
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .header-kofi-button .kofi-button {
+        font-size: 0.75rem !important;
+        padding: 4px 10px !important;
+    }
+
+    .hero-overlay {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 20px 30px 20px;
+        align-items: center;    
+        justify-content: flex-start;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-overlay::before {
+        content: "";
+        display: block;
+        width: 160px;          
+        height: 160px;
+        background-image: url('Images/RoundTPPhoenix_large.webp') !important; 
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 20px;      
+        margin-bottom: 10px;   
+    }
+
+    h1, .subtitle, .tech-tag {
+        position: relative !important;
+        left: 0 !important;
+        transform: none !important;
+        text-align: center !important;
+        white-space: normal !important; 
+        margin-bottom: 0px;            
+    }
+
+    h1 {
+        font-size: 3.2rem; 
+        margin-bottom: 5px;
+    }
+
+    .subtitle {
+        font-size: 1.15rem;
+        margin-bottom: 5px;
+    }
+
+    .mission-inline {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .tech-tag {
+        display: block !important;
+        position: relative !important;
+        left: 0 !important;
+        transform: none !important;
+        width: 90% !important;
+        margin: 0 auto 10px auto !important;
+        text-align: center !important;
+        padding: 0 !important;
+        white-space: normal !important;
+    }
+
+    .text-group {
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .expansion-container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

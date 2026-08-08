@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Termly AutoBlocker MUST run first -->
+    <script type="text/javascript" src="https://app.termly.io/resource-blocker/4562684d-cef8-4691-afdc-edf40e2d1968?autoBlock=on"></script>
+	<!--Google Analytics -->
+	<script src="analytics.js"></script>
+	
+	<!-- Favicon & Mobile Icons -->
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="manifest" href="Images/site.webmanifest">
+	
+    <title>The Phoenix Project - Contact Us</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">   
+    <!-- Link to your stylesheets -->
+    <link rel="stylesheet" href="contactTheme.css"> 
+	<link rel="stylesheet" href="brandTheme.css"> <!-- Global stuff -->
+</head>
+<body>
+
+<div class="container">
+
+    
+        <header class="web-header">
+    <a href="index.html" style="text-decoration: none;">
+        <div class="brand-title">The Phoenix Project</div>
+    </a>
+    <div class="header-controls">
+        <div class="page-title">Contact Us</div> <!-- Change this text for each page -->
+    </div>
+		</header>
+ 
+
+    <main>
+        <h1 class="main-title">Connect With Us</h1>
+        <div class="subtitle">Have a question, a story to share, or looking to collaborate? Reach out below.</div>
+
+        <div class="content-grid">
+            
+            <section class="left-col">
+                <h2>Send A Message</h2>
+                <form id="Contact" action="https://formspree.io/f/mjgqdwdw" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 20px; margin-top: 20px;">
+                    <button type="submit" class="submit-btn" id="submitBtn">SEND MESSAGE</button>
+					
+					<a href="privacy.html" target="_blank" rel="noopener noreferrer" style="font-size: 0.9em; color: #DBDBDB; text-decoration: underline;">Privacy Policy</a>
+					</div>
+                    <p id="formStatus" style="margin-top: 15px; font-weight: 600; display: none;"></p>
+                </form>
+            </section>
+
+            <aside class="right-col">
+                <h2>Connect With Us</h2>
+                <p style="font-size: 9.5pt; color: #000000; margin-bottom: 15px; font-weight: 600;">
+        Whether you are seeking support, looking to inspire others, or interested in a strategic partnership, we want to hear from you. 
+				</p>
+				<p style="font-size: 9.5pt; color: #000000; margin-bottom: 12px;">
+					<strong>Share Your Journey:</strong> Are you a cancer survivor or thriver? We invite you to share your story with us for a chance to be featured in our upcoming weekly "Featured Story" spotlight.
+				</p>
+				<p style="font-size: 9.5pt; color: #000000; margin-bottom: 12px;">
+					<strong>Community & Support:</strong> If you or a loved one have any breast cancer-related questions, please don't hesitate to reach out. You are not alone in this.
+				</p>
+				<p style="font-size: 9.5pt; color: #000000; margin-bottom: 15px;">
+					<strong>Industry Alliances:</strong> We welcome inquiries from potential manufacturing and licensing partners looking to collaborate on our supportive care innovations.
+				</p>
+				<p style="font-size: 9.5pt; color: #555555; margin-bottom: 0; font-style: italic; border-top: 1px solid #e1e2e6; padding-top: 10px;">
+					Messages are reviewed regularly, and we aim to respond to all community and strategic inquiries within 48 business hours.
+					</p>
+            </aside>
+            
+        </div>
+    </main>
+
+</div>
+
+<script>
+document.getElementById('Contact').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    const status = document.getElementById('formStatus');
+    
+    btn.disabled = true;
+    btn.innerText = "SENDING...";
+    status.style.display = "block";
+    status.style.color = "#C5A028";
+    status.innerText = "Processing your message...";
+
+    const formData = new FormData(e.target);
+
+    try {
+        // --- SWAPPED THE OLD CLOUDFLARE URL FOR YOUR FORMSPREE ENDPOINT ---
+        const response = await fetch('https://formspree.io/f/mjgqdwdw', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json' // Formspree expects this header for AJAX requests
+            }
+        });
+
+        if (response.ok) {
+            status.style.color = "#fcfaf2";
+            status.innerText = "Thank you! Your message has been sent successfully.";
+            e.target.reset();
+        } else {
+            throw new Error('Server error');
+        }
+    } catch (error) {
+        status.style.color = "#E05370";
+        status.innerText = `Debug Notice: ${error.message || 'Connection Interrupted'}`;
+    } finally {
+        btn.disabled = false;
+        btn.innerText = "SEND MESSAGE";
+    }
+});
+</script>
+<!-- START REUSABLE FOOTER SECTOR -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <nav class="footer-nav">			
+           		<a href="index.html" class="footer-link">Home</a>
+				<a href="about.html" class="footer-link">About</a>
+				<a href="stories/storyCategories.html" class ="footer-link">Stories</a>
+				<a href="teaser/innovation.html" class="footer-link">The Invention</a>				
+				<a href="contact.html" class="footer-link">Contact</a>
+				<a href="https://thephoenixproject.discourse.group" class="footer-link" target="_blank" rel="noopener">Community Forum</a>
+
+        </nav>
+        <div class="footer-copyright">
+            &copy; 2026 The Phoenix Project. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+<!-- END REUSABLE FOOTER SECTOR -->
+
+	<!--Ko-fi button script -->
+	<script src="kofi-widget.js"></script>
+	
+</body>
+</html>
