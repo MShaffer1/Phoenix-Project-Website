@@ -46,11 +46,11 @@ document.addEventListener('DOMContentLoaded', function() {
         var bottomRow = document.createElement('div');
         bottomRow.className = 'footer-bottom-row';
 
-        var complianceHTML = 
+       var complianceHTML = 
     '<div class="compliance-links">' +
         '<a href="/privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> | ' +
         '<a href="/cookiePolicy.html" target="_blank" rel="noopener noreferrer">Cookie Policy</a> | ' +
-        '<a href="javascript:void(0)" class="termly-display-preferences" onclick="if(window.Termly && typeof window.Termly.displayPreferences === \'function\'){ window.Termly.displayPreferences(); } else { window.dispatchEvent(new CustomEvent(\'termly-display-preferences\')); } return false;">Consent Preferences</a>' +
+        '<a href="#" class="termly-display-preferences" data-termly-display="preferences" onclick="if(window.Termly){ if(typeof window.Termly.openPreferenceCenter === \'function\'){ window.Termly.openPreferenceCenter(); } else if(typeof window.Termly.displayPreferences === \'function\'){ window.Termly.displayPreferences(); } } return false;">Consent Preferences</a>' +
     '</div>';
 
         var socialHTML = 
