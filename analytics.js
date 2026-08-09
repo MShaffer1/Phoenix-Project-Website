@@ -86,17 +86,21 @@ document.addEventListener('DOMContentLoaded', function() {
         var container = footer.querySelector('.footer-container') || footer;
         container.appendChild(bottomRow);
 
-        var preferencesBtn = document.getElementById('termly-preferences-link');
-        if (preferencesBtn) {
-            preferencesBtn.addEventListener('click', function(e) {
+        // Delegation listener attached directly to the footer container
+        footer.addEventListener('click', function(e) {
+            var target = e.target.closest('#termly-preferences-link, .termly-display-preferences');
+            if (target) {
                 e.preventDefault();
+                
+                // 1. Dispatch Termly Auto-Blocker custom event
+                window.dispatchEvent(new CustomEvent('termly-display-preferences'));
+                
+                // 2. Direct API call fallback (if available)
                 if (window.Termly && typeof window.Termly.displayPreferences === 'function') {
                     window.Termly.displayPreferences();
-                } else {
-                    console.warn('Termly API unavailable.');
                 }
-            });
-        }
+            }
+        });
 
         var copyBtn = document.getElementById('copy-share-link');
         if (copyBtn) {
