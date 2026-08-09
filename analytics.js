@@ -46,12 +46,21 @@ document.addEventListener('DOMContentLoaded', function() {
         var bottomRow = document.createElement('div');
         bottomRow.className = 'footer-bottom-row';
 
-       var complianceHTML = 
+      // Clean Compliance Links Block for analytics.js
+var complianceHTML = 
     '<div class="compliance-links">' +
         '<a href="/privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> | ' +
         '<a href="/cookiePolicy.html" target="_blank" rel="noopener noreferrer">Cookie Policy</a> | ' +
-        '<a href="#" class="termly-display-preferences" onclick="if(typeof displayPreferenceModal === \'function\'){ displayPreferenceModal(); } else if(window.Termly && typeof window.Termly.displayPreferences === \'function\'){ window.Termly.displayPreferences(); } return false;">Consent Preferences</a>' +    '</div>';
+        '<a href="#" class="termly-display-preferences" onclick="if(typeof displayPreferenceModal === \'function\'){ displayPreferenceModal(); } else if(window.Termly && typeof window.Termly.displayPreferences === \'function\'){ window.Termly.displayPreferences(); } return false;">Consent Preferences</a>' +
+    '</div>';
 
+// Append compliance links directly to the footer container
+document.addEventListener("DOMContentLoaded", function () {
+    var footerContainer = document.querySelector('.footer-container');
+    if (footerContainer) {
+        footerContainer.insertAdjacentHTML('beforeend', complianceHTML);
+    }
+});
         var socialHTML = 
             '<div class="footer-social-inline">' +
                 '<a class="social-btn" href="https://twitter.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle + '" target="_blank" rel="noopener noreferrer" title="Share on X">' +
