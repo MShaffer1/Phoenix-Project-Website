@@ -87,17 +87,16 @@ document.addEventListener('DOMContentLoaded', function() {
         container.appendChild(bottomRow);
 
         // Delegation listener attached directly to the footer container
-        footer.addEventListener('click', function(e) {
+       footer.addEventListener('click', function(e) {
             var target = e.target.closest('#termly-preferences-link, .termly-display-preferences');
             if (target) {
                 e.preventDefault();
                 
-                // 1. Dispatch Termly Auto-Blocker custom event
-                window.dispatchEvent(new CustomEvent('termly-display-preferences'));
-                
-                // 2. Direct API call fallback (if available)
                 if (window.Termly && typeof window.Termly.displayPreferences === 'function') {
                     window.Termly.displayPreferences();
+                } else {
+                    // Fallback to dispatching custom event if embed script hasn't initialized
+                    window.dispatchEvent(new CustomEvent('termly-display-preferences'));
                 }
             }
         });
