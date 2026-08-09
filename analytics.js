@@ -50,8 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     '<div class="compliance-links">' +
         '<a href="/privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> | ' +
         '<a href="/cookiePolicy.html" target="_blank" rel="noopener noreferrer">Cookie Policy</a> | ' +
-        '<a href="#" class="termly-display-preferences" data-termly-display="preferences" onclick="if(window.Termly){ if(typeof window.Termly.openPreferenceCenter === \'function\'){ window.Termly.openPreferenceCenter(); } else if(typeof window.Termly.displayPreferences === \'function\'){ window.Termly.displayPreferences(); } } return false;">Consent Preferences</a>' +
-    '</div>';
+        '<a href="#" class="termly-display-preferences" onclick="if(typeof displayPreferenceModal === \'function\'){ displayPreferenceModal(); } else if(window.Termly && typeof window.Termly.displayPreferences === \'function\'){ window.Termly.displayPreferences(); } return false;">Consent Preferences</a>' +    '</div>';
 
         var socialHTML = 
             '<div class="footer-social-inline">' +
