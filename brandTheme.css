@@ -94,7 +94,6 @@ img {
 
 /* Clean, Elegant Home Button Style */
 .home-btn {
-    float: right;
     margin-top: 5px;
     display: inline-block;
     font-family: 'Inter', sans-serif;
