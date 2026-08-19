@@ -62,6 +62,7 @@ body {
     justify-content: center;
     align-items: flex-start; 
     padding-right: 5%; 
+    
 }
 
 .text-group {
@@ -88,8 +89,10 @@ h1 {
     font-size: clamp(3rem, 6vw, 5rem); 
     margin-bottom: 0.75rem; 
     color: #f72585; 
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.95), 0 0 8px #D4AF37;
-    line-height: 1.1;
+text-shadow: 
+        0px 3px 6px rgba(0, 0, 0, 0.95),
+        0px 0px 12px rgba(0, 0, 0, 0.8),
+        0px 0px 14px #D4AF37;
 }
 
 /* Subtitle */
@@ -98,16 +101,22 @@ h1 {
     font-size: clamp(1.1rem, 2.2vw, 1.6rem); 
     font-weight: normal;
     color: #fcfaf2;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;      
+    /* Strong dark halo & drop shadow to slice through the phoenix graphic */
+    text-shadow: 
+        0px 2px 5px rgba(0, 0, 0, 0.95),
+        0px 0px 8px rgba(0, 0, 0, 0.7);   
     white-space: nowrap;
 }
 
 /* Quote Text */
 .mission-inline {
     font-style: italic;
-    font-size: clamp(1.1rem, 1.8vw, 1.35rem); 
+    font-size: clamp(1.1rem, 1.8vw, 1.6rem); 
     color: #F16AA0; 
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 2px 2px 5px rgba(0, 0, 0, 0.9);      
+    /* Strong dark halo & drop shadow to slice through the phoenix graphic */
+    text-shadow: 
+        0px 2px 4px rgba(0, 0, 0, 0.95),
+        0px 0px 6px rgba(0, 0, 0, 0.8);      
     white-space: nowrap; 
     margin-bottom: 10px;
 }
@@ -118,7 +127,11 @@ h1 {
     letter-spacing: 2px;
     font-weight: 600;
     color: #fcfaf2; 
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1), 0 0 8px #D4AF37;  
+    /* Soft dark diffusion: Creates a deep contrast pocket behind the letters without a hard outline */
+    text-shadow: 
+        0px 2px 4px rgba(0, 0, 0, 0.95),
+        0px 0px 8px rgba(0, 0, 0, 0.9),
+        0px 0px 14px rgba(0, 0, 0, 0.8);
     max-width: 70%;
     white-space: normal;
     text-align: center;
