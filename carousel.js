@@ -5,6 +5,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!carousel || !prevBtn || !nextBtn) return;
 
+  // Centralized Video Data Array
+  const videosData = [
+    {
+      title: "Diagnosis & First Steps",
+      src: "https://media.thephoenixproject4k.com/DiagnosisVid_compressed2.mp4",
+      poster: "Images/DiagnosisVid_Thumbnail.jpg",
+      caption: "A direct look into the platform's vision, journey, and where it all started."
+    },
+    {
+      title: "Treatment Update",
+      src: "https://media.thephoenixproject4k.com/PostBiopsyThoughts.mp4",
+      poster: "Images/PostBiopsyThumb_Full_withText.JPG",
+      caption: "My Post-Biopsy Thoughts."
+    },
+    {
+      title: "Milestones & Reflections",
+      src: "https://media.thephoenixproject4k.com/PostChemo1_24hours_WithText.mp4",
+      poster: "Images/PostChemo1_24hourslater.jpg",
+      caption: "How I'm feeling 24 hours after my first chemo treatment."
+    },
+    {
+      title: "Milestones & Reflections",
+      src: "https://media.thephoenixproject4k.com/OneWeekPostACTreatment1.mp4",
+      poster: "Images/Week_1_afterTreatment_1_withText.jpg",
+      caption: "One Week Later: Post AC Treatment #1."
+    }
+  ];
+
+  // Render Video Slides Dynamically
+  carousel.innerHTML = videosData.map(video => `
+    <div class="carousel-slide">
+      <h3>${video.title}</h3>
+      <div class="video-container">
+        <video controls preload="metadata" playsinline poster="${video.poster}">
+          <source src="${video.src}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p class="media-caption">${video.caption}</p>
+    </div>
+  `).join('');
+
   let isTransitioning = false;
 
   // Touch Tracking Variables
