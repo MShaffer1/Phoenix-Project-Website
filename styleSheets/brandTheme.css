@@ -30,7 +30,7 @@ img {
                 rgba(0, 0, 0, 0) 30%, 
                 rgba(0, 0, 0, 0) 70%, 
                 rgba(0, 0, 0, 0.8) 100%), 
-                url('Images/Transparent Phoenix.png') no-repeat center 20%;
+                url('../Images/Transparent_Phoenix.png') no-repeat center 20%;
     background-size: cover;
     padding: 30px 20px; 
     margin-bottom: 30px;
@@ -63,7 +63,7 @@ img {
     line-height: 1.3;
     margin: 10px 0 15px 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9),
-                 0 0 10px rgba(234, 42, 111, 0.3); /* Soft pink ambient glow */
+                 0 0 10px rgba(234, 42, 111, 0.3); 
 }
 
 /* Mobile scaling for title */
@@ -160,7 +160,7 @@ img {
 /* Image Attribution Line */
 .image-credit {
     font-size: 1rem;
-    color: var(--text-muted, #666666);
+    color: var(--text-muted, #707070);
     margin-top: 0.4rem;
     text-align: right;
 }
@@ -191,8 +191,8 @@ img {
     color: #ea2a6f !important; /* Overrides the global pale pink rule */
     font-size: 22px;
     line-height: 1.4;
-    margin: 0;
-}
+    margin: 0;}
+
 
 /* Ensure the article body clears any floats to stay organized */
 .article-body {
@@ -380,7 +380,7 @@ li {
                     rgba(0, 0, 0, 0.9) 0%, 
                     rgba(0, 0, 0, 0.4) 50%, 
                     rgba(0, 0, 0, 0.9) 100%), 
-                    url('Images/Transparent Phoenix.png');
+                    url('../Images/Transparent Phoenix.png');
         background-size: cover;
         background-position: center;
         /* Ensures the header has enough height to show the image */
@@ -449,7 +449,7 @@ li {
 .footer-copyright {
     font-family: 'Inter', sans-serif;
     font-size: 8.5pt;
-    color: #666666;
+    color: #707070;
     letter-spacing: 0.5px;
     margin-top: 5px;
 }
@@ -559,7 +559,9 @@ li {
 /* Fix for Back Links */
 .back-link {
     display: inline-block;
-    color: #ea2a6f; 
+    color: #f75691; 
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.95), 
+                 0 0 4px #D4AF37;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -760,4 +762,32 @@ li {
         max-width: 100%;
         margin: 0 0 20px 0;
     }
+}
+
+.meta-category {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:#f9dbe6; /* Explicitly keeps the default white text */
+    margin-bottom: 8px;
+}
+
+.meta-date {
+    font-size: 0.85rem;
+    color: #ff7dad; /* Keeps default white text */
+    opacity: 0.8;   /* Softens the text slightly for standard metadata hierarchy */
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
+
+/* Story Comments Section Title */
+.comments-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    color: #E9166A;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.95), 
+                 0 0 4px #D4AF37;
+    margin-bottom: 24px;
 }

@@ -27,7 +27,7 @@ body {
     min-height: 100vh;
     max-height: 100vh;       /* Hard cap to eliminate vertical scrolling */
     
-    background-image: url('Images/RoundPhoenix_New_Large.webp');
+    background-image: url('../Images/RoundPhoenix_New_Large.webp');
     background-position: 10% center;
     background-repeat: no-repeat;
     background-size: 55% auto;  
@@ -330,7 +330,7 @@ text-shadow:
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #ea2a6f;
+    color: #E9166A;
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -386,7 +386,7 @@ text-shadow:
         display: block;
         width: 160px;          
         height: 160px;
-        background-image: url('Images/RoundTPPhoenix_large.webp') !important; 
+        background-image: url('../Images/RoundTPPhoenix_large.webp') !important; 
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -446,4 +446,13 @@ text-shadow:
         flex-direction: column;
         gap: 15px;
     }
+}
+
+/* Story Comments Section Title */
+.comments-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    color: #E9166A;
+    text-align: center;
+    margin-bottom: 24px;
 }
