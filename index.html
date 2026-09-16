@@ -1,116 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <!-- 1. Essential Meta Tags First -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Termly AutoBlocker MUST run first -->
-    <script type="text/javascript" src="https://app.termly.io/resource-blocker/4562684d-cef8-4691-afdc-edf40e2d1968?autoBlock=on"></script>
-   
+    <script
+      type="text/javascript"
+      src="https://app.termly.io/resource-blocker/4562684d-cef8-4691-afdc-edf40e2d1968?autoBlock=on"
+    ></script>
+
     <!-- Google Analytics -->
     <script src="analytics.js?v=1.1"></script>
-    
-    <!-- Favicon & Mobile Icons -->
-    <link rel="icon" type="image/x-icon" href="Images/favicon_io/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="Images/favicon_io/site.webmanifest">
 
-    <!-- Page title -->	
+    <!-- Favicon & Mobile Icons -->
+    <link rel="icon" type="image/x-icon" href="Images/favicon_io/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Images/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Images/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Images/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="Images/favicon_io/site.webmanifest" />
+
+    <!-- Page title -->
     <title>The Phoenix Project</title>
-    
+
     <!-- Open Graph / Social Media Preview Tags -->
     <meta property="og:title" content="The Phoenix Project" />
-    <meta property="og:description" content="Documenting the journey & Pioneering Solutions." />
-    <meta property="og:image" content="https://raw.githubusercontent.com/MShaffer1/Phoenix-Project-Website/refs/heads/main/Images/RoundPhoenix_SolidBackground.jpg" />
-    <meta property="og:url" content="https://github.com/MShaffer1/Phoenix-Project-Website" />
+    <meta
+      property="og:description"
+      content="Documenting the journey & Pioneering Solutions."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/MShaffer1/Phoenix-Project-Website/refs/heads/main/Images/RoundPhoenix_SolidBackground.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://github.com/MShaffer1/Phoenix-Project-Website"
+    />
     <meta property="og:type" content="website" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styleSheets/style.css"> 
-</head>
-<body>
-
+    <link rel="stylesheet" href="styleSheets/style.css" />
+  </head>
+  <body>
     <header class="hero">
-        <!-- Ko-fi button -->
-        <div class="header-kofi-button">
-            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+      <!-- Ko-fi button -->
+      <div class="header-kofi-button">
+        <script
+          type="text/javascript"
+          src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"
+        ></script>
+      </div>
+
+      <div class="hero-overlay">
+        <div class="text-group">
+          <h1>The Phoenix Project</h1>
+          <p class="subtitle">Documenting the Journey & Pioneering Solutions</p>
+          <p class="mission-inline">
+            "Healing is a process, not a destination"
+          </p>
+          <div class="tech-tag">
+            Creating a safe space for survivors to share their stories, find
+            honest treatment insights, and champion purposeful health
+            innovations.
+          </div>
         </div>
-    
-        <div class="hero-overlay">
-            <div class="text-group">
-                <h1>The Phoenix Project</h1>
-                <p class="subtitle">Documenting the Journey & Pioneering Solutions</p>
-                <p class="mission-inline">"Healing is a process, not a destination"</p>
-                <div class="tech-tag">Creating a safe space for survivors to share their stories, find honest treatment insights, and champion purposeful health innovations.</div>
-            </div>
-        </div>
+      </div>
     </header>
-    
+
     <section class="expansion-container">
-        
-        <h2 class="expansion-title">Featured Media & Updates</h2>
-        
-        <div class="media-grid">
-                       
-            <!-- Single-Card Carousel (Far Left Slot) -->
-            <div class="media-card carousel-card-wrapper">
-                <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Previous Video">&#10094;</button>
+      <h2 class="expansion-title">Featured Media & Updates</h2>
 
-                <!-- DYNAMICALLY POPULATED BY CAROUSEL.JS -->
-                <div class="video-carousel single-card-track" id="videoCarousel"></div>
+      <div class="media-grid">
+        <!-- Single-Card Carousel (Far Left Slot) -->
+        <div class="media-card carousel-card-wrapper">
+          <button
+            class="carousel-btn prev-btn"
+            id="prevBtn"
+            aria-label="Previous Video"
+          >
+            &#10094;
+          </button>
 
-                <button class="carousel-btn next-btn" id="nextBtn" aria-label="Next Video">&#10095;</button>
-            </div>
+          <!-- DYNAMICALLY POPULATED BY CAROUSEL.JS -->
+          <div
+            class="video-carousel single-card-track"
+            id="videoCarousel"
+          ></div>
 
-            <!-- Middle Slot -->
-            <div class="media-card">
-                <h3>Purposeful Innovation</h3>
-                <img src="Images/ProductTeaserPhoto.jpg" alt="Bioadhesive Matrix Development" class="grid-image">
-                <p class="media-caption">Pioneering specialized delivery systems and bioadhesive matrices designed to protect and support oral tissue healing.</p>
-            </div>
-
-            <!-- Right Slot -->
-            <div class="media-card">
-                <h3>Platform Spotlight</h3>
-                <img src="Images/LegalShield.jpg" alt="Project Update" class="grid-image">
-                <p class="media-caption">Highlighting the official filing of U.S. Provisional Patent Application No. 63/993,997, establishing strict baseline protections for our bioadhesive delivery system modalities.</p>
-            </div>
-
+          <button
+            class="carousel-btn next-btn"
+            id="nextBtn"
+            aria-label="Next Video"
+          >
+            &#10095;
+          </button>
         </div>
+
+        <!-- Middle Slot -->
+        <div class="media-card">
+          <h3>Purposeful Innovation</h3>
+          <img
+            src="Images/ProductTeaserPhoto.jpg"
+            alt="Bioadhesive Matrix Development"
+            class="grid-image"
+          />
+          <p class="media-caption">
+            Pioneering specialized delivery systems and bioadhesive matrices
+            designed to protect and support oral tissue healing.
+          </p>
+        </div>
+
+        <!-- Right Slot -->
+        <div class="media-card">
+          <h3>Platform Spotlight</h3>
+          <img
+            src="Images/LegalShield.jpg"
+            alt="Project Update"
+            class="grid-image"
+          />
+          <p class="media-caption">
+            Highlighting the official filing of U.S. Provisional Patent
+            Application No. 63/993,997, establishing strict baseline protections
+            for our bioadhesive delivery system modalities.
+          </p>
+        </div>
+      </div>
     </section>
-            
+
     <!-- START REUSABLE FOOTER SECTOR -->
     <footer class="site-footer">
-        <div class="footer-container">
-            <nav class="footer-nav">
-                <a href="index.html" class="footer-link">Home</a>
-                <a href="about.html" class="footer-link">About</a>
-                <a href="stories/storyCategories.html" class="footer-link">Stories</a>
-                <a href="teaser/innovation.html" class="footer-link">The Invention</a>
-                <a href="contact.html" class="footer-link">Contact</a>
-                <a href="https://thephoenixproject.discourse.group" class="footer-link" target="_blank" rel="noopener">Community Forum</a>
-                
-                <!-- Inline Ko-fi Button inside footer nav -->
-                <div class="footer-kofi-button">
-                    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-                </div>
-            </nav>
-            
-            <!-- Copyright -->
-            <div class="footer-copyright">
-                &copy; 2026 The Phoenix Project. All Rights Reserved.
-            </div>
+      <div class="footer-container">
+        <nav class="footer-nav">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">About</a>
+          <a href="stories/storyCategories.html" class="footer-link">Stories</a>
+          <a href="teaser/innovation.html" class="footer-link">The Invention</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+          <a
+            href="[https://thephoenixproject.discourse.group](https://thephoenixproject.discourse.group)"
+            class="footer-link forum-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Community Forum</a
+          >
+
+          <!-- Discord Button with Brand Icon -->
+          <a
+            href="https://discord.gg/dZwnPxsxUu"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="discord-btn"
+          >
+            <svg
+              class="discord-icon"
+              viewBox="0 0 127.14 96.36"
+              width="18"
+              height="18"
+              aria-hidden="true"
+              fill="currentColor"
+            >
+              <path
+                d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1,105.25,105.25,0,0,0,32.19-16.14c2.64-27.38-4.51-51.11-18.91-72.15ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.92,53.87,53,48.8,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.92,96.1,53,91,65.69,84.69,65.69Z"
+              />
+            </svg>
+            <span>Join us on Discord</span>
+          </a>
+
+          <!-- Inline Ko-fi Button inside footer nav -->
+          <div class="footer-kofi-button">
+            <script
+              type="text/javascript"
+              src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"
+            ></script>
+          </div>
+        </nav>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          &copy; 2026 The Phoenix Project. All Rights Reserved.
         </div>
+      </div>
     </footer>
     <!-- END REUSABLE FOOTER SECTOR -->
 
     <!-- carousel link -->
     <script src="carousel.js?v=1.0"></script>
     <script src="kofi-widget.js?v=1.0"></script>
-</body>
+  </body>
 </html>
