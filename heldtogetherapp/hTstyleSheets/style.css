@@ -1,7 +1,7 @@
 /* Color Palette Extracted from Flutter Splash Screen */
 :root {
-  --bg-app: #6E8E7E; /* Warm off-white app background */
-  --card-bg: #ffffff; /* Card background */
+  --bg-app: #6e8e7e; /* Updated side bar / app background */
+  --card-bg: #ffffff; /* Main card background */
   --title-color: #2b322e; /* Dark slate green title */
   --subtitle-color: #8a938c; /* Muted sage-grey subtitle */
   --ring-color: #8ba698; /* Interlocking rings accent */
@@ -10,11 +10,15 @@
   --badge-bg: #efefea; /* Muted badge background */
 }
 
-/* Reset & Base Layout */
+/* Reset & Smooth Scroll */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,11 +27,17 @@ body {
     sans-serif;
   background-color: var(--bg-app);
   color: var(--title-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  padding: 24px;
+  padding: 40px 20px;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 /* Main Container Card */
@@ -35,8 +45,7 @@ body {
   background: var(--card-bg);
   padding: 48px 32px;
   border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
-  max-width: 440px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
   width: 100%;
   text-align: center;
 }
@@ -100,7 +109,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Button Styling Matches Flutter FilledButton */
 .cta-button {
   display: flex;
   justify-content: center;
@@ -147,4 +155,144 @@ footer {
 .divider {
   margin: 0 8px;
   color: #d0d5d1;
+}
+
+/* Embedded Legal Sections */
+.legal-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.legal-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  text-align: left;
+}
+
+.legal-card h2 {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-bottom: 4px;
+}
+
+.legal-card .last-updated {
+  font-size: 0.8rem;
+  color: var(--subtitle-color);
+  margin-bottom: 16px;
+}
+
+.legal-card h3 {
+  font-size: 0.95rem;
+  color: var(--title-color);
+  margin: 16px 0 6px 0;
+}
+
+.legal-card p {
+  font-size: 0.88rem;
+  color: #4a5568;
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+.legal-card a {
+  color: var(--btn-color);
+  text-decoration: none;
+}
+
+.legal-card a:hover {
+  text-decoration: underline;
+}
+
+.back-to-top {
+  margin-top: 18px;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.back-to-top a {
+  color: var(--subtitle-color);
+  font-weight: 500;
+}
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(43, 50, 46, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal Box */
+.modal-content {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 28px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--subtitle-color);
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  font-size: 1.3rem;
+  color: var(--title-color);
+  margin-bottom: 4px;
+}
+
+.modal-content .last-updated {
+  font-size: 0.8rem;
+  color: var(--subtitle-color);
+  margin-bottom: 16px;
+}
+
+.modal-body h3 {
+  font-size: 0.95rem;
+  color: var(--title-color);
+  margin: 14px 0 4px 0;
+}
+
+.modal-body p {
+  font-size: 0.88rem;
+  color: #4a5568;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.modal-body a {
+  color: var(--btn-color);
+  text-decoration: none;
 }

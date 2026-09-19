@@ -4,35 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
-
-    <!-- favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="hTimages/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="hTimages/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="hTimages/favicon-16x16.png"
-    />
-    <link rel="manifest" href="hTimages/site.webmanifest" />
-
     <title>Held Together</title>
-
-    <!-- Stylesheets-->
     <link rel="stylesheet" href="hTstyleSheets/style.css" />
   </head>
   <body>
     <main class="card">
-      <!-- Interlocking Rings SVG (Mirrors Flutter CustomPainter) -->
       <div class="logo-container" aria-label="Held Together Logo">
         <svg
           class="interlocking-rings"
@@ -55,17 +31,120 @@
           We're building a supportive platform designed to foster meaningful
           connection and seamless relationship communication.
         </p>
-        <a href="mailto:heldtogethersupport@gmail.com?subject=Kickstarter%20Launch%20Notification" class="cta-button">Notify Me at Launch</a>
+        <a
+          href="mailto:heldtogethersupport@gmail.com?subject=Kickstarter%20Launch%20Notification"
+          class="cta-button"
+          >Notify Me at Launch</a
+        >
       </div>
 
       <footer>
         <p>&copy; Held Together. All rights reserved.</p>
         <nav class="footer-links">
-          <a href="privacy.html">Privacy Policy</a>
+          <a href="hTprivacy.html" id="privacy-link">Privacy Policy</a>
           <span class="divider">•</span>
-          <a href="terms.html">Terms of Service</a>
+          <a href="hTterms.html" id="terms-link">Terms of Service</a>
         </nav>
       </footer>
     </main>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal-overlay" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close Privacy Policy">
+          &times;
+        </button>
+        <h2>Privacy Policy</h2>
+        <p class="last-updated">Effective Date: September 19, 2026</p>
+        <div class="modal-body">
+          <p>
+            Welcome to <strong>Held Together</strong>. We respect your privacy
+            and are committed to protecting any personal information shared with
+            us.
+          </p>
+          <h3>1. Information Collection</h3>
+          <p>
+            We collect basic information such as your email address for account
+            notifications and OAuth tokens when using Google Sign-In.
+          </p>
+          <h3>2. Usage & Sharing</h3>
+          <p>
+            Information is used solely to provide, support, and secure the
+            service. We do not sell or trade your personal data.
+          </p>
+          <h3>3. Contact</h3>
+          <p>
+            Questions? Reach us at
+            <a href="mailto:heldtogethersupport@gmail.com"
+              >heldtogethersupport@gmail.com</a
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div id="terms-modal" class="modal-overlay" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close Terms of Service">
+          &times;
+        </button>
+        <h2>Terms of Service</h2>
+        <p class="last-updated">Effective Date: September 19, 2026</p>
+        <div class="modal-body">
+          <p>
+            By using <strong>Held Together</strong>, you agree to these Terms of
+            Service.
+          </p>
+          <h3>1. Acceptable Use</h3>
+          <p>You agree to use Held Together lawfully and responsibly.</p>
+          <h3>2. Intellectual Property</h3>
+          <p>
+            All branding, logos, and features are proprietary property of Held
+            Together.
+          </p>
+          <h3>3. Contact</h3>
+          <p>
+            Reach us at
+            <a href="mailto:heldtogethersupport@gmail.com"
+              >heldtogethersupport@gmail.com</a
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Modal Interactivity
+      const privacyLink = document.getElementById("privacy-link");
+      const termsLink = document.getElementById("terms-link");
+      const privacyModal = document.getElementById("privacy-modal");
+      const termsModal = document.getElementById("terms-modal");
+      const closeButtons = document.querySelectorAll(".modal-close");
+
+      privacyLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        privacyModal.classList.add("active");
+      });
+
+      termsLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        termsModal.classList.add("active");
+      });
+
+      closeButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          privacyModal.classList.remove("active");
+          termsModal.classList.remove("active");
+        });
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target.classList.contains("modal-overlay")) {
+          privacyModal.classList.remove("active");
+          termsModal.classList.remove("active");
+        }
+      });
+    </script>
   </body>
 </html>
