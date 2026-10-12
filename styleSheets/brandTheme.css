@@ -4,13 +4,23 @@
   box-sizing: border-box;
 }
 
+/* Smooth Reader-Focused 4-Color Diagonal Gradient */
+/* Reader-Focused Pink-Tone Diagonal Linear Gradient */
 body {
-  font-family: "Inter", sans-serif;
-  color: #f5f6fa;
-  margin: 0;
-  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #000000;
+  color: #f5f6fa;
+  background-color: #050505;
+  background-image: linear-gradient(
+    to bottom right,
+    #2c0a17 0%,
+    /* Rich Pink-Wine accent (Top-Left) */ #13040a 5%,
+    /* Deep Rose-Charcoal transition */ #080808 10%,
+    /* Matte Black central reading canvas */ #160209 100%
+      /* Subtle Rose-Black finish (Bottom-Right) */
+  );
+  background-attachment: scroll;
+  min-height: 100vh;
 }
 
 img {

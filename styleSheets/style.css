@@ -14,8 +14,26 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
-  color: #333;
-  background-color: #000000;
+  color: #f5f6fa;
+  background-color: #050505;
+
+  /* Safe split background declaration */
+  background-image: linear-gradient(-45deg, #000000, #25040d, #000000, #25040d);
+  background-size: 400% 400%;
+  animation: ambientShift 15s ease infinite;
+}
+
+/* Keyframes placed safely outside all CSS selectors */
+@keyframes ambientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* ==========================================
