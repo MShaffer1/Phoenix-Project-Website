@@ -18,10 +18,11 @@ img {
   height: auto;
   display: block;
 }
+
 /* Modern Web Wrapper */
 .container {
   width: 80%; /* Uses 80% of screen width on small screens */
-  max-width: 1500px; /* Won't grow past 1500px on your big monitor */
+  max-width: 1500px; /* Won't grow past 1500px on big monitors */
   margin: 0 auto;
 }
 
@@ -63,7 +64,7 @@ img {
 /* Main Article Post Title */
 .post-title {
   font-family: "Inter", sans-serif;
-  font-size: 30px; /* Clean, scaled-down fixed size */
+  font-size: 30px;
   font-weight: 700;
   color: #d4af37; /* Signature Gold */
   line-height: 1.3;
@@ -71,13 +72,6 @@ img {
   text-shadow:
     2px 2px 4px rgba(0, 0, 0, 0.9),
     0 0 10px rgba(234, 42, 111, 0.3);
-}
-
-/* Mobile scaling for title */
-@media (max-width: 768px) {
-  .post-title {
-    font-size: 22px; /* Scaled down for mobile screens */
-  }
 }
 
 /* Right side container to hold URL and Home Button together */
@@ -101,8 +95,8 @@ img {
 }
 
 /* Clean, Elegant Home Button Style */
-.home-btn {
-  margin-top: 5px;
+.home-btn,
+.nav-btn {
   display: inline-block;
   font-family: "Inter", sans-serif;
   font-weight: 600;
@@ -117,29 +111,20 @@ img {
   letter-spacing: 0.5px;
 }
 
-.home-btn:hover {
-  background-color: #000000;
-  box-shadow: 0 0 15px rgba(234, 42, 111, 0.4);
+.home-btn {
+  margin-top: 5px;
 }
 
-/* Navigation Button Styling */
-.nav-btn {
-  display: inline-block;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 0.95rem;
+.home-btn:hover,
+.nav-btn:hover {
+  background-color: #000000;
+  box-shadow: 0 0 15px rgba(234, 42, 111, 0.4);
   color: #ffffff;
-  text-decoration: none;
-  background-color: #ea2a6f;
-  border: 2px solid #ea2a6f;
-  padding: 10px 24px;
-  border-radius: 20px;
-  transition: all 0.3s ease;
 }
 
 .hero-image {
-  float: left; /* Pushes image to the left */
-  width: 40%; /* Adjust width as needed */
+  float: left;
+  width: 40%;
   max-width: 400px;
   margin: 10px 20px 10px 0;
   height: auto;
@@ -159,7 +144,7 @@ img {
   width: 100%;
   max-width: 100%;
   height: auto;
-  max-height: 450px; /* Adjust this number to control vertical height */
+  max-height: 450px;
   object-fit: cover;
   border-radius: 8px;
   display: block;
@@ -182,48 +167,30 @@ img {
   color: var(--brand-accent, #c87d55);
 }
 
-/* Add this to make sure your blockquote doesn't get messed up by the float */
+/* Blockquote Formatting */
 .article-blockquote {
   clear: both;
-  margin: 35px 0; /* Gives the quote some breathing room top and bottom */
-  padding: 18px 22px; /* Creates space inside the box */
-  font-size: 22px; /* Keeps your original size */
-  color: #ea2a6f; /* Your Signature Brand Pink */
-  border-left: 5px solid #d4af37; /* Signature Gold accent line on the left */
-  background-color: rgba(
-    234,
-    42,
-    111,
-    0.05
-  ); /* A very faint, translucent pink background */
+  margin: 35px 0;
+  padding: 18px 22px;
+  font-size: 22px;
+  color: #ea2a6f;
+  border-left: 5px solid #d4af37;
+  background-color: rgba(234, 42, 111, 0.05);
   border-radius: 0 8px 8px 0;
 }
 
-/* Direct target for paragraph inside blockquote - Brighter Signature Pink */
 .article-blockquote p {
-  color: #ea2a6f !important; /* Overrides the global pale pink rule */
+  color: #ea2a6f !important;
   font-size: 22px;
   line-height: 1.4;
   margin: 0;
 }
 
-/* Ensure the article body clears any floats to stay organized */
+/* Ensure the article body clears floats */
 .article-body {
   width: 100%;
   margin: 30px 0;
   padding-top: 20px;
-}
-
-/* Responsive adjustment for mobile */
-@media (max-width: 768px) {
-  .article-hero-flex {
-    flex-direction: column; /* Stacks image on top of text on phones */
-  }
-}
-.nav-btn:hover {
-  background-color: #000000;
-  box-shadow: 0 0 15px rgba(234, 42, 111, 0.4);
-  color: #ffffff;
 }
 
 .main-title {
@@ -244,7 +211,7 @@ img {
   padding-bottom: 12px;
 }
 
-/* Modern Flexbox Grid Layout */
+/* Flexbox Grid Layout */
 .content-grid {
   display: flex;
   flex-direction: row;
@@ -273,30 +240,28 @@ img {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
 }
 
-/* Styling the Pillar Titles */
+/* Styling Pillar Titles */
 .pillar-title {
-  font-size: 1.2rem; /* Adjust this size (e.g., 1.1rem, 1.2rem) */
+  font-size: 1.2rem;
   font-weight: 600;
-  color: #e9166a; /* Using your brand pink */
+  color: #e9166a;
   margin-bottom: 5px;
   display: flex;
   align-items: center;
 }
 
-/* Adding the bullet point and italicizing the text */
 .pillar-text {
-  font-size: 1rem; /* Adjust text size here */
-  color: #444444; /* Dark grey for contrast */
-  font-style: italic; /* Italicizes the text */
-  padding-left: 20px; /* Creates space for the bullet */
+  font-size: 1rem;
+  color: #444444;
+  font-style: italic;
+  padding-left: 20px;
   position: relative;
-  margin-bottom: 20px; /* Space between pillars */
+  margin-bottom: 20px;
 }
 
-/* This creates the bullet point automatically */
 .pillar-text::before {
-  content: "•"; /* The bullet symbol */
-  color: #d4af37; /* Using your brand gold */
+  content: "•";
+  color: #d4af37;
   font-weight: bold;
   display: inline-block;
   width: 1em;
@@ -316,8 +281,8 @@ h2 {
 p {
   margin: 0 0 16px 0;
   text-align: left;
-  color: #f9dbe6; /* Pale Blush Pink - soft, high legibility on dark backgrounds */
-  line-height: 1.7; /* Extra breathing room between lines for comfortable reading */
+  color: #f9dbe6;
+  line-height: 1.7;
 }
 
 ul {
@@ -329,7 +294,7 @@ li {
   margin-bottom: 8px;
 }
 
-/* Stat Box Cards stylized with Red/Pink and Gold accents */
+/* Stat Box Cards */
 .stat-box {
   background-color: #ffffff;
   border: 1px solid #fce4ec;
@@ -376,109 +341,7 @@ li {
   letter-spacing: 0.5px;
 }
 
-/* Responsive Stack for Mobile Screens */
-@media (max-width: 768px) {
-  .content-grid {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .header-controls {
-    width: 100%;
-    justify-content: center; /* Centers the 'About' title too */
-    margin-top: 10px;
-  }
-  .web-header {
-    /* Simplifies the background for mobile to ensure it renders */
-    background:
-      linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.9) 0%,
-        rgba(0, 0, 0, 0.4) 50%,
-        rgba(0, 0, 0, 0.9) 100%
-      ),
-      url("../Images/Transparent Phoenix.png");
-    background-size: cover;
-    background-position: center;
-    /* Ensures the header has enough height to show the image */
-    min-height: 150px;
-    /* ADD THIS TO CENTER THE TITLE ON MOBILE: */
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .brand-title {
-    /* This ensures the title centers perfectly within the column */
-    margin: 0 auto;
-    display: block;
-  }
-
-  .page-title {
-    font-size: 16px; /* Adjust this value until it looks perfect */
-  }
-}
-
-/* Site Footer Structuring & Accent Rules */
-.site-footer {
-  width: 100%;
-  background-color: #000000;
-  border-top: 3px solid #d4af37;
-  padding: 30px 20px;
-  margin-top: 60px;
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-/* Links Row Rules */
-.footer-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.footer-link {
-  font-family: "Inter", sans-serif;
-  font-size: 10pt;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #ea2a6f;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-/* Highlight Hover Transitions */
-.footer-link:hover {
-  color: #f5f6fa;
-  text-shadow: 0 0 8px rgba(245, 246, 250, 0.4);
-}
-
-.footer-copyright {
-  font-family: "Inter", sans-serif;
-  font-size: 8.5pt;
-  color: #707070;
-  letter-spacing: 0.5px;
-  margin-top: 5px;
-}
-
-/* Responsive scaling rule for mobile views */
-@media (max-width: 600px) {
-  .footer-nav {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-
-/* Styling to blend the CTA beautifully with your brand identity */
+/* Contact CTA Link */
 .contact-cta-link {
   display: inline-block;
   margin-top: 15px;
@@ -487,19 +350,18 @@ li {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #ea2a6f; /* Signature Pink */
+  color: #ea2a6f;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .contact-cta-link:hover {
-  color: #f5f6fa; /* Transitions to Off-White just like the footer */
+  color: #f5f6fa;
   text-shadow: 0 0 8px rgba(245, 246, 250, 0.4);
-  transform: translateX(3px); /* Subtle nudge animation forward */
+  transform: translateX(3px);
 }
 
 /* Featured Story Hero Section */
-
 .featured-hero {
   display: flex;
   gap: 30px;
@@ -507,7 +369,7 @@ li {
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 40px;
-  align-items: flex-start; /* Aligns content to the top for better balance */
+  align-items: flex-start;
 }
 
 .hero-img {
@@ -521,7 +383,7 @@ li {
 
 .hero-content {
   width: 40%;
-  flex: 0 0 40%; /* Prevents the text from growing */
+  flex: 0 0 40%;
 }
 
 /* Stories Grid */
@@ -556,21 +418,20 @@ li {
   padding-bottom: 10px;
 }
 
-/* Styling the "Read More" links to match your brand */
 .read-more-link {
   display: inline-block;
-  color: #ea2a6f; /* Your signature brand pink */
+  color: #ea2a6f;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .read-more-link:hover {
-  color: #f5f6fa; /* Changes to off-white on hover */
+  color: #f5f6fa;
   text-shadow: 0 0 8px rgba(245, 246, 250, 0.4);
 }
 
-/* Fix for Back Links */
+/* Back Links */
 .back-link {
   display: inline-block;
   color: #f75691;
@@ -599,6 +460,8 @@ li {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .archive-item {
@@ -633,7 +496,7 @@ li {
 
 .archive-meta {
   font-size: 0.85rem;
-  color: #c5a028; /* Restored Gold */
+  color: #c5a028;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 5px;
@@ -650,7 +513,7 @@ li {
 }
 
 .archive-title a:hover {
-  color: #ea2a6f; /* Restored Pink */
+  color: #ea2a6f;
 }
 
 .archive-excerpt {
@@ -663,49 +526,14 @@ li {
   margin-bottom: 30px;
 }
 
-.archive-list {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-@media (max-width: 600px) {
-  .archive-item {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .archive-thumb {
-    width: 100%;
-    height: 160px;
-  }
-}
-/* --- Mobile Analytics Logic --- */
-
-/* By default, the mobile-only block in your left-col is hidden */
-.mobile-analytics {
-  display: none;
-}
-
-/* On screens 768px or smaller, toggle visibility */
-@media (max-width: 768px) {
-  /* Show the mobile-only section */
-  .mobile-analytics {
-    display: block;
-  }
-
-  /* Hide the original sidebar */
-  #sidebar-analytics {
-    display: none;
-  }
-}
-/* Flex container to hold the iframe and the article text side-by-side */
+/* Article Hero & Facebook Container Layouts */
 .article-hero-flex {
   display: flex;
   gap: 30px;
-  align-items: center !important; /* Added !important to crush any hidden overrides */
+  align-items: center !important;
   margin-bottom: 30px;
 }
 
-/* Keeps the Facebook frame at its native size */
 .fb-embed-container {
   width: 500px;
   max-width: 100%;
@@ -716,16 +544,194 @@ li {
   max-width: 100%;
 }
 
-/* Controls the text block on the right */
 .hero-text-block {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers all paragraph content vertically */
-  height: 498px; /* Matches the exact physical height of your iframe */
+  justify-content: center;
+  height: 498px;
 }
 
-/* Tablet & Mobile Layout: Stacks them vertically on smaller screens */
+.hero-image-box {
+  float: left;
+  width: 40%;
+  max-width: 400px;
+  margin: 0 25px 15px 0;
+}
+
+.hero-image-inline {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.image-credit-inline {
+  font-size: 0.85rem;
+  color: #888888;
+  margin-top: 6px;
+  text-align: right;
+}
+
+.image-credit-inline a {
+  color: #ea2a6f;
+  text-decoration: underline;
+}
+
+.image-credit-inline a:hover {
+  color: #d4af37;
+}
+
+.meta-category {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #f9dbe6;
+  margin-bottom: 8px;
+}
+
+.meta-date {
+  font-size: 0.85rem;
+  color: #ff7dad;
+  opacity: 0.8;
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+
+.comments-title {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: #e9166a;
+  text-align: center;
+  text-shadow:
+    2px 2px 3px rgba(0, 0, 0, 0.95),
+    0 0 4px #d4af37;
+  margin-bottom: 24px;
+}
+
+/* ==========================================
+   SITE FOOTER STYLING (JS FOOTER COMPATIBLE)
+   ========================================== */
+.site-footer {
+  width: 100%;
+  background-color: #000000;
+  border-top: 3px solid #d4af37;
+  padding: 30px 20px;
+  margin-top: 60px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Row 1: Text Links */
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-link {
+  font-family: "Inter", sans-serif;
+  font-size: 10pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ea2a6f;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #f5f6fa;
+  text-shadow: 0 0 8px rgba(245, 246, 250, 0.4);
+}
+
+/* Row 2: Community Buttons (Centered Below Links) */
+.footer-community-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+/* Shared Community Button Base Styling */
+.forum-btn,
+.discord-btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: none !important;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  vertical-align: middle;
+}
+
+/* Forum Button Specifics */
+.forum-btn {
+  color: #ffffff;
+  background-color: #ea2a6f;
+  border: 1px solid #ea2a6f;
+}
+
+.forum-btn:hover {
+  color: #000000;
+  background-color: #f5f6fa;
+  border-color: #f5f6fa;
+  transform: translateY(-1px);
+  box-shadow: 0 0 12px rgba(245, 246, 250, 0.4);
+}
+
+/* Discord Button Specifics */
+.discord-btn {
+  gap: 8px;
+  color: #ffffff;
+  background-color: #5865f2;
+  border: 1px solid #5865f2;
+}
+
+.discord-btn:hover {
+  background-color: #ea2a6f;
+  border-color: #ea2a6f;
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+.discord-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer-copyright {
+  font-family: "Inter", sans-serif;
+  font-size: 8.5pt;
+  color: #707070;
+  letter-spacing: 0.5px;
+  margin-top: 5px;
+}
+
+/* ==========================================
+   RESPONSIVE MOBILE BREAKPOINTS
+   ========================================== */
+.mobile-analytics {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .article-hero-flex {
     flex-direction: column;
@@ -737,139 +743,117 @@ li {
     justify-content: center;
   }
   .hero-text-block {
-    height: auto; /* Releases the fixed height on mobile screens */
+    height: auto;
   }
 }
 
-/* Container that floats both image and caption together */
-.hero-image-box {
-  float: left;
-  width: 40%;
-  max-width: 400px;
-  margin: 0 25px 15px 0; /* Space to the right and bottom for text flow */
+@media (max-width: 768px) {
+  .post-title {
+    font-size: 22px;
+  }
+  .content-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .header-controls {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .web-header {
+    background:
+      linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.9) 100%
+      ),
+      url("../Images/Transparent Phoenix.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 150px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .brand-title {
+    margin: 0 auto;
+    display: block;
+  }
+  .page-title {
+    font-size: 16px;
+  }
+  .mobile-analytics {
+    display: block;
+  }
+  #sidebar-analytics {
+    display: none;
+  }
 }
 
-/* Image inside the floating container */
-.hero-image-inline {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-}
-
-/* Styled caption underneath the floated image */
-.image-credit-inline {
-  font-size: 0.85rem;
-  color: #888888;
-  margin-top: 6px;
-  text-align: right;
-}
-
-.image-credit-inline a {
-  color: #ea2a6f; /* Signature Brand Pink */
-  text-decoration: underline;
-}
-
-.image-credit-inline a:hover {
-  color: #d4af37; /* Signature Gold */
-}
-
-/* Responsive adjustment for mobile screens */
 @media (max-width: 600px) {
+  .footer-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .footer-community-row {
+    flex-direction: column;
+    gap: 12px;
+  }
   .hero-image-box {
     float: none;
     width: 100%;
     max-width: 100%;
     margin: 0 0 20px 0;
   }
+  .archive-item {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .archive-thumb {
+    width: 100%;
+    height: 160px;
+  }
 }
 
-.meta-category {
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #f9dbe6; /* Explicitly keeps the default white text */
-  margin-bottom: 8px;
+/* Footer 3-Column Copyright Row */
+.footer-copyright-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+  gap: 15px;
+  box-sizing: border-box;
 }
 
-.meta-date {
-  font-size: 0.85rem;
-  color: #ff7dad; /* Keeps default white text */
-  opacity: 0.8; /* Softens the text slightly for standard metadata hierarchy */
-  margin-top: 6px;
-  margin-bottom: 20px;
-}
-
-/* Story Comments Section Title */
-.comments-title {
+.copyright-text {
   font-family: "Inter", sans-serif;
-  font-size: 1.5rem;
-  color: #e9166a;
+  font-size: 8.5pt;
+  color: #707070;
+  letter-spacing: 0.5px;
   text-align: center;
-  text-shadow:
-    2px 2px 3px rgba(0, 0, 0, 0.95),
-    0 0 4px #d4af37;
-  margin-bottom: 24px;
-}
-/* Discord Footer Button */
-.discord-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #ffffff;
-  background-color: #5865f2; /* Matching Brand Pink */
-  border: 1px solid #5865f2;
-  padding: 6px 14px;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  vertical-align: middle;
+  margin: 0;
 }
 
-.discord-btn:hover {
-  background-color: #ea2a6f; /* Optional: Discord Blurple hover shift */
-  border-color: #ea2a6f;
-  transform: translateY(-1px);
-  box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); /* Subtle Gold Aura Accent */
+@media (max-width: 768px) {
+  .footer-copyright-row {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 12px;
+  }
 }
-
-.discord-icon {
-  display: inline-block;
-  vertical-align: middle;
-}
-/* Community Forum Button Style */
-.forum-btn {
-  display: inline-flex;
-  align-items: center;
+/* Consolidated Copyright Text Styling */
+.copyright-text {
   font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 0.8rem;
-  color: #ffffff;
-  background-color: #ea2a6f; /* Signature Brand Pink */
-  border: 1px solid #ea2a6f;
-  padding: 6px 14px;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  vertical-align: middle;
-}
-
-.forum-btn:hover {
-  color: #000000; /* Dark text on hover for high contrast */
-  background-color: #f5f6fa; /* Soft off-white hover color */
-  border-color: #f5f6fa;
-  transform: translateY(-1px);
-  box-shadow: 0 0 12px rgba(245, 246, 250, 0.4); /* Soft off-white glow */
-}
-/* Ensure consistent casing, font, and size across both buttons */
-.forum-btn,
-.discord-btn {
-  text-transform: none !important; /* Overrides global ALL-CAPS rule */
-  font-size: 0.9rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-size: 8.5pt;
+  color: #707070;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 0;
 }

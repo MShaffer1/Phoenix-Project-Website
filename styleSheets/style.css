@@ -3,7 +3,9 @@
    ========================================== */
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600;700&family=Bilbo:wght@400;700&family=Tangerine:wght@400;700&display=swap");
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -102,7 +104,6 @@ h1 {
   font-size: clamp(1.1rem, 2.2vw, 1.6rem);
   font-weight: normal;
   color: #fcfaf2;
-  /* Strong dark halo & drop shadow to slice through the phoenix graphic */
   text-shadow:
     0px 2px 5px rgba(0, 0, 0, 0.95),
     0px 0px 8px rgba(0, 0, 0, 0.7);
@@ -114,7 +115,6 @@ h1 {
   font-style: italic;
   font-size: clamp(1.1rem, 1.8vw, 1.6rem);
   color: #f16aa0;
-  /* Strong dark halo & drop shadow to slice through the phoenix graphic */
   text-shadow:
     0px 2px 4px rgba(0, 0, 0, 0.95),
     0px 0px 6px rgba(0, 0, 0, 0.8);
@@ -128,7 +128,6 @@ h1 {
   letter-spacing: 2px;
   font-weight: 600;
   color: #fcfaf2;
-  /* Soft dark diffusion: Creates a deep contrast pocket behind the letters without a hard outline */
   text-shadow:
     0px 2px 4px rgba(0, 0, 0, 0.95),
     0px 0px 8px rgba(0, 0, 0, 0.9),
@@ -165,7 +164,7 @@ h1 {
   text-shadow:
     1px 1px 2px rgba(0, 0, 0, 1),
     0 0 8px #d4af37;
-  text-align: center; /* Centered title */
+  text-align: center;
 }
 
 /* Responsive Media Grid */
@@ -233,6 +232,21 @@ h1 {
   margin: 15px 0 0 0;
 }
 
+/* Synthesizer & Pillar Formatting */
+.synthesizer-block {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #d4af37;
+}
+
+.right-col .pillar-box {
+  margin-bottom: 1.25rem;
+}
+
+.right-col .pillar-box:last-child {
+  margin-bottom: 0;
+}
+
 /* ==========================================
    4. VIDEO CAROUSEL DECK
    ========================================== */
@@ -249,12 +263,12 @@ h1 {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   width: 100%;
-  -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
-  scrollbar-width: none; /* Hide scrollbar Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .single-card-track::-webkit-scrollbar {
-  display: none; /* Hide scrollbar Chrome/Safari */
+  display: none;
 }
 
 .carousel-slide {
@@ -300,13 +314,22 @@ h1 {
   right: 8px;
 }
 
+/* Comments Title */
+.comments-title {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: #e9166a;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
 /* ==========================================
    5. SITE FOOTER STYLING
    ========================================== */
 .site-footer {
   width: 100%;
   background-color: #000000;
-  border-top: 3px solid #d4af37; /* Signature Gold Top Border Divider */
+  border-top: 3px solid #d4af37;
   padding: 30px 20px;
   margin-top: 60px;
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
@@ -321,6 +344,7 @@ h1 {
   gap: 20px;
 }
 
+/* Row 1: Text Links */
 .footer-nav {
   display: flex;
   justify-content: center;
@@ -345,6 +369,67 @@ h1 {
   text-shadow: 0 0 8px rgba(245, 246, 250, 0.4);
 }
 
+/* Row 2: Community Buttons (Centered Below Links) */
+.footer-community-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+/* Shared Button Styles */
+.forum-btn,
+.discord-btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: none !important;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  vertical-align: middle;
+}
+
+/* Forum Button Specifics */
+.forum-btn {
+  color: #ffffff;
+  background-color: #ea2a6f;
+  border: 1px solid #ea2a6f;
+}
+
+.forum-btn:hover {
+  color: #000000;
+  background-color: #f5f6fa;
+  border-color: #f5f6fa;
+  transform: translateY(-1px);
+  box-shadow: 0 0 12px rgba(245, 246, 250, 0.4);
+}
+
+/* Discord Button Specifics */
+.discord-btn {
+  gap: 8px;
+  color: #ffffff;
+  background-color: #5865f2;
+  border: 1px solid #5865f2;
+}
+
+.discord-btn:hover {
+  background-color: #ea2a6f;
+  border-color: #ea2a6f;
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+.discord-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .footer-copyright {
   font-family: "Inter", sans-serif;
   font-size: 8.5pt;
@@ -358,170 +443,48 @@ h1 {
    ========================================== */
 @media (max-width: 768px) {
   .hero {
-    background-image: none !important;
-    height: auto !important;
-    min-height: auto !important;
-    max-height: none !important;
-    overflow-y: visible !important;
-  }
-
-  .header-kofi-button {
-    top: 1rem;
-    right: 1rem;
-  }
-
-  .header-kofi-button .kofi-button {
-    font-size: 0.75rem !important;
-    padding: 4px 10px !important;
-  }
-
-  .hero-overlay {
-    max-width: 100%;
-    width: 100%;
-    padding: 0 20px 30px 20px;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hero-overlay::before {
-    content: "";
-    display: block;
-    width: 160px;
-    height: 160px;
-    background-image: url("../Images/RoundTPPhoenix_large.webp") !important;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-
-  h1,
-  .subtitle,
-  .tech-tag {
-    position: relative !important;
-    left: 0 !important;
-    transform: none !important;
-    text-align: center !important;
-    white-space: normal !important;
-    margin-bottom: 0px;
-  }
-
-  h1 {
-    font-size: 3.2rem;
-    margin-bottom: 5px;
-  }
-
-  .subtitle {
-    font-size: 1.15rem;
-    margin-bottom: 5px;
-  }
-
-  .mission-inline {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-  }
-
-  .tech-tag {
-    display: block !important;
-    position: relative !important;
-    left: 0 !important;
-    transform: none !important;
-    width: 90% !important;
-    margin: 0 auto 10px auto !important;
-    text-align: center !important;
-    padding: 0 !important;
-    white-space: normal !important;
-  }
-
-  .text-group {
-    margin-left: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .expansion-container {
-    padding: 0 20px;
+    background-image: none;
   }
 }
 
-@media (max-width: 600px) {
-  .footer-nav {
-    flex-direction: column;
-    gap: 15px;
-  }
+/* Footer 3-Column Copyright Row */
+.footer-copyright-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+  gap: 15px;
+  box-sizing: border-box;
 }
 
-/* Story Comments Section Title */
-.comments-title {
+.copyright-text {
   font-family: "Inter", sans-serif;
-  font-size: 1.5rem;
-  color: #e9166a;
+  font-size: 8.5pt;
+  color: #707070;
+  letter-spacing: 0.5px;
   text-align: center;
-  margin-bottom: 24px;
+  margin: 0;
 }
 
-/* Discord Footer Button */
-.discord-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+@media (max-width: 768px) {
+  .footer-copyright-row {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 12px;
+  }
+}
+/* Consolidated Copyright Text Styling */
+.copyright-text {
   font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #ffffff;
-  background-color: #5865f2; /* Matching Brand Pink */
-  border: 1px solid #5865f2;
-  padding: 6px 14px;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  vertical-align: middle;
-}
-
-.discord-btn:hover {
-  background-color: #ea2a6f; /* Optional: Discord Blurple hover shift */
-  border-color: #ea2a6f;
-  transform: translateY(-1px);
-  box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); /* Subtle Gold Aura Accent */
-}
-
-.discord-icon {
-  display: inline-block;
-  vertical-align: middle;
-}
-/* Community Forum Button Style */
-.forum-btn {
-  display: inline-flex;
-  align-items: center;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 0.8rem;
-  color: #ffffff;
-  background-color: #ea2a6f; /* Signature Brand Pink */
-  border: 1px solid #ea2a6f;
-  padding: 6px 14px;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  vertical-align: middle;
-}
-
-.forum-btn:hover {
-  color: #000000; /* Dark text on hover for high contrast */
-  background-color: #f5f6fa; /* Soft off-white hover color */
-  border-color: #f5f6fa;
-  transform: translateY(-1px);
-  box-shadow: 0 0 12px rgba(245, 246, 250, 0.4); /* Soft off-white glow */
-}
-/* Ensure consistent casing, font, and size across both buttons */
-.forum-btn,
-.discord-btn {
-  text-transform: none !important; /* Overrides global ALL-CAPS rule */
-  font-size: 0.9rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-size: 8.5pt;
+  color: #707070;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 0;
 }
