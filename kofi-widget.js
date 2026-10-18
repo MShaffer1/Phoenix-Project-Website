@@ -27,12 +27,25 @@ document.addEventListener("DOMContentLoaded", function () {
         footerContainer.innerHTML = kofiHTML;
       }
 
-      // 4. Force Ko-fi links to open in a new tab/window
+      // 4. Clean up inline styles & force target="_blank"
       document
-        .querySelectorAll(".header-kofi-button a, .footer-kofi-button a")
-        .forEach(function (anchor) {
-          anchor.setAttribute("target", "_blank");
-          anchor.setAttribute("rel", "noopener noreferrer");
+        .querySelectorAll(".header-kofi-button, .footer-kofi-button")
+        .forEach(function (container) {
+          // Force container and internal Ko-fi elements into normal flow
+          const kofiElement = container.querySelector(
+            "a, iframe, div, .btn-container",
+          );
+          if (kofiElement) {
+            kofiElement.style.position = "static";
+            kofiElement.style.top = "auto";
+            kofiElement.style.left = "auto";
+            kofiElement.style.transform = "none";
+          }
+
+          container.querySelectorAll("a").forEach(function (anchor) {
+            anchor.setAttribute("target", "_blank");
+            anchor.setAttribute("rel", "noopener noreferrer");
+          });
         });
     }
   };

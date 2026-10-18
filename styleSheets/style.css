@@ -460,49 +460,94 @@ h1 {
    6. RESPONSIVE MOBILE STYLES
    ========================================== */
 @media (max-width: 768px) {
+  /* Restores image and lets hero expand naturally on phone screens */
   .hero {
-    background-image: none;
-  }
-}
-
-/* Footer 3-Column Copyright Row */
-.footer-copyright-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin-top: 15px;
-  padding-top: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  flex-wrap: wrap;
-  gap: 15px;
-  box-sizing: border-box;
-}
-
-.copyright-text {
-  font-family: "Inter", sans-serif;
-  font-size: 8.5pt;
-  color: #707070;
-  letter-spacing: 0.5px;
-  text-align: center;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .footer-copyright-row {
+    height: auto;
+    min-height: auto;
+    max-height: none;
     flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    gap: 12px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 15px 30px 15px;
+
+    /* Keeps desktop image, but centers it at top of mobile screens */
+    background-position: center 30px;
+    background-size: 200px auto;
   }
-}
-/* Consolidated Copyright Text Styling */
-.copyright-text {
-  font-family: "Inter", sans-serif;
-  font-size: 8.5pt;
-  color: #707070;
-  letter-spacing: 0.5px;
-  text-align: center;
-  margin: 0;
+
+  /* Un-pins Ko-fi button from top-right so it sits below top graphic */
+  .header-kofi-button {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 200px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Resets desktop right-padding & left-margins on mobile */
+  .hero-overlay {
+    padding-right: 0;
+    align-items: center;
+    width: 100%;
+  }
+
+  .text-group {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* Prevents horizontal text overflow on narrow screens */
+  .subtitle,
+  .mission-inline {
+    white-space: normal;
+  }
+
+  .tech-tag {
+    max-width: 90%;
+  }
+
+  /* Footer 3-Column Copyright Row */
+  .footer-copyright-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-wrap: wrap;
+    gap: 15px;
+    box-sizing: border-box;
+  }
+
+  .copyright-text {
+    font-family: "Inter", sans-serif;
+    font-size: 8.5pt;
+    color: #707070;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .footer-copyright-row {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      gap: 12px;
+    }
+  }
+  /* Consolidated Copyright Text Styling */
+  .copyright-text {
+    font-family: "Inter", sans-serif;
+    font-size: 8.5pt;
+    color: #707070;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin: 0;
+  }
 }
