@@ -174,7 +174,7 @@ h1 {
 
 .expansion-title {
   font-family: "Lucida Calligraphy", "Apple Chancery", cursive;
-  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: normal;
   color: #f72585;
   margin-bottom: 2rem;
