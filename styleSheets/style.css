@@ -43,16 +43,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 100vh; /* Strictly lock to 100% viewport height */
+  height: auto; /* Strictly lock to 100% viewport height */
   min-height: 100vh;
-  max-height: 100vh; /* Hard cap to eliminate vertical scrolling */
+  max-height: none; /* Hard cap to eliminate vertical scrolling */
 
   background-image: url("../Images/RoundPhoenix_New_Large.webp");
   background-position: 10% center;
   background-repeat: no-repeat;
   background-size: 55% auto;
 
-  overflow: hidden; /* Safety net to crop extra overflow */
   box-sizing: border-box;
   position: relative;
 }
@@ -111,9 +110,9 @@ h1 {
   margin-bottom: 0.75rem;
   color: #f72585;
   text-shadow:
-    0px 3px 6px rgba(0, 0, 0, 0.95),
-    0px 0px 12px rgba(0, 0, 0, 0.8),
-    0px 0px 14px #d4af37;
+    0px 3px 6px rgba(0, 0, 0, 0.85),
+    0px 0px 12px rgba(0, 0, 0, 0.65),
+    0px 0px 10px #d4af37;
 }
 
 /* Subtitle */
@@ -123,8 +122,8 @@ h1 {
   font-weight: normal;
   color: #fcfaf2;
   text-shadow:
-    0px 2px 5px rgba(0, 0, 0, 0.95),
-    0px 0px 8px rgba(0, 0, 0, 0.7);
+    0px 1px 2px rgba(0, 0, 0, 0.75),
+    0px 0px 3px rgba(0, 0, 0, 0.35);
   white-space: nowrap;
 }
 
@@ -272,7 +271,7 @@ h1 {
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .single-card-track {
@@ -448,14 +447,29 @@ h1 {
   vertical-align: middle;
 }
 
-.footer-copyright {
-  font-family: "Inter", sans-serif;
-  font-size: 8.5pt;
-  color: #666666;
-  letter-spacing: 0.5px;
-  margin-top: 5px;
+/* Footer 3-Column Copyright Row */
+.footer-copyright-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+  gap: 15px;
+  box-sizing: border-box;
 }
 
+.copyright-text {
+  font-family: "Inter", sans-serif;
+  font-size: 10pt;
+  color: #b3afaf;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 0;
+}
 /* ==========================================
    6. RESPONSIVE MOBILE STYLES
    ========================================== */
@@ -474,7 +488,24 @@ h1 {
     background-position: center 30px;
     background-size: 200px auto;
   }
+  @media (prefers-reduced-motion: reduce) {
+    body {
+      animation: none;
+    }
+  }
 
+  @media (max-width: 768px) {
+    .expansion-container {
+      width: 100%;
+      padding: 0 32px;
+      box-sizing: border-box;
+    }
+
+    .media-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
   /* Un-pins Ko-fi button from top-right so it sits below top graphic */
   .header-kofi-button {
     position: relative;
@@ -509,43 +540,10 @@ h1 {
     max-width: 90%;
   }
 
-  /* Footer 3-Column Copyright Row */
-  .footer-copyright-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    flex-wrap: wrap;
-    gap: 15px;
-    box-sizing: border-box;
-  }
-
   .copyright-text {
     font-family: "Inter", sans-serif;
-    font-size: 8.5pt;
-    color: #707070;
-    letter-spacing: 0.5px;
-    text-align: center;
-    margin: 0;
-  }
-
-  @media (max-width: 768px) {
-    .footer-copyright-row {
-      flex-direction: column;
-      text-align: center;
-      justify-content: center;
-      gap: 12px;
-    }
-  }
-  /* Consolidated Copyright Text Styling */
-  .copyright-text {
-    font-family: "Inter", sans-serif;
-    font-size: 8.5pt;
-    color: #707070;
+    font-size: 10pt;
+    color: #b3afaf;
     letter-spacing: 0.5px;
     text-align: center;
     margin: 0;
