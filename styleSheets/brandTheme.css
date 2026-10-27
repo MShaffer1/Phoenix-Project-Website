@@ -505,6 +505,16 @@ li {
   flex-shrink: 0;
 }
 
+/* Container that bounds thumbnail and caption width */
+.archive-thumb-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns container contents to the right */
+  width: 100%;
+  max-width: 150px; /* Matches archive-thumb image width */
+}
 .archive-details {
   display: flex;
   flex-direction: column;
@@ -598,7 +608,30 @@ li {
 .image-credit-inline a:hover {
   color: #d4af37;
 }
+/* Scaled-down, right-aligned caption */
+.image-caption-inline {
+  font-family: "Inter", sans-serif;
+  font-size: 0.72rem; /* Smaller, subtle font size */
+  color: #a0a0a0; /* Muted gray for non-link text */
+  margin-top: 6px;
+  line-height: 1.25;
+  text-align: center; /* Right-aligned text under thumbnail */
+  width: 100%;
+}
 
+/* Brand Pink Link Styling inside Caption */
+.image-caption-inline a,
+.image-caption-inline a:link,
+.image-caption-inline a:visited {
+  color: #ea2a6f; /* Signature Brand Pink */
+  text-decoration: underline; /* Underline matching example style */
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.image-caption-inline a:hover {
+  color: #d4af37; /* Signature Metallic Gold on hover */
+}
 .meta-category {
   font-size: 0.9rem;
   font-weight: 600;
@@ -877,4 +910,90 @@ li {
   letter-spacing: 0.5px;
   text-align: center;
   margin: 0;
+}
+/* =================================== */
+/* WHITE RESOURCE CARD CONTAINER       */
+/* =================================== */
+
+.resource-card {
+  background-color: #fafafa; /* Off-white background */
+  border-top: 4px solid #ea2a6f; /* Signature Pink top border */
+  border-bottom: 4px solid #d4af37; /* Metallic Gold bottom border */
+  border-radius: 8px;
+  padding: 35px 40px;
+  margin: 25px 0 40px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Soft depth shadow against black page */
+  color: #2b2b2b; /* Sharp off-black text color */
+}
+
+/* Section Titles inside the Card */
+.resource-card h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c5a028; /* Warm Ochre Gold for high contrast */
+  text-shadow:
+    -0.5px -0.5px 0 #424242,
+    0.5px -0.5px 0 #424242,
+    -0.5px 0.5px 0 #424242,
+    0.5px 0.5px 0 #424242;
+  margin: 30px 0 12px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e2e8f0; /* Soft light divider */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.resource-card h2:first-of-type {
+  margin-top: 0; /* Flush fit for the top title */
+}
+
+/* List Items & Descriptions */
+.resource-card ul {
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.resource-card li {
+  font-family: "Inter", sans-serif;
+  font-size: 1.15rem; /* Matches link scale */
+  line-height: 1.65;
+  color: #2b2b2b; /* Dark, legible text on light card */
+  margin-bottom: 12px;
+}
+
+.resource-card li strong {
+  color: #111111;
+}
+
+/* Hyperlink Styling for Light Card Background */
+.resource-card a,
+.resource-card a:link {
+  font-family: "Inter", sans-serif;
+  font-size: 1.15rem;
+  color: #ca075f; /* Deep pink for accessibility on light background */
+  text-decoration: underline;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Visited Links inside Card */
+.resource-card a:visited {
+  color: #053538; /* Muted teal for visited state */
+  text-decoration: underline;
+}
+
+/* Hover & Focus States inside Card */
+.resource-card a:hover,
+.resource-card a:focus,
+.resource-card a:active {
+  color: #182942; /* Dark blue shift on hover */
+  text-shadow: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .resource-card {
+    padding: 20px 18px;
+  }
 }

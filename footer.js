@@ -123,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <a href="${prefix}stories/storyCategories.html" class="footer-link">Stories</a>
           <a href="${prefix}teaser/innovation.html" class="footer-link">The Invention</a>
           <a href="${prefix}contact.html" class="footer-link">Contact</a>
+          <a href="${prefix}stories/resourceList.html" class="footer-link">Resources</a>
         </nav>
 
         <!-- Row 2: Community Buttons (Centered Below Links) -->
