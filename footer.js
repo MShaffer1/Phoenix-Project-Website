@@ -70,6 +70,14 @@ document.addEventListener("DOMContentLoaded", function () {
         text-align: center;
         margin: 0;
       }
+      .disclaimer-text {
+        font-family: "Inter", sans-serif;
+        font-size: 10pt;
+        color: #a0a0a0;
+        letter-spacing: 0.5px;
+        text-align: center;
+        margin: 0;
+    }
       .footer-social-inline {
         display: flex;
         align-items: center;
@@ -159,6 +167,10 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="footer-kofi-button"></div>
         </div>
 
+          <div class="disclaimer-text">
+            <em>For educational and informational purposes only. Not a substitute for professional medical advice, diagnosis, or treatment.</em>
+          </div>
+
         <!-- Row 3: 3-Column Bottom Bar (Privacy Left | Copyright Center | Social Right) -->
         <div class="footer-copyright-row">
           <!-- Compliance Links (Left) -->
@@ -170,8 +182,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
           <!-- Centered Copyright (Middle) -->
           <div class="copyright-text">
-            &copy; 2026 The Phoenix Project. All Rights Reserved.
+            &copy; 2026 The Phoenix Project. All Rights Reserved. 
           </div>
+
+        
 
           <!-- Social Share Buttons (Right) -->
           <div class="footer-social-inline">

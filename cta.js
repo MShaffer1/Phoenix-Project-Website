@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <div class="call-to-action">
       <p>
-        <strong>Which part speaks to you the most?</strong> Tell me below in the comments section. Share your story, your journey, and your self-love practices. Let's create a community of support and encouragement for one another.
+        <strong>Which part speaks to you the most?</strong> <br /> Tell me below in the comments section. Share your story, your journey, and your self-love practices. Let's create a community of support and encouragement for one another.
       </p>
     </div>
   `;
