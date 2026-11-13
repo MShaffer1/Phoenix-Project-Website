@@ -6,19 +6,22 @@
 
 /* Smooth Reader-Focused 4-Color Diagonal Gradient */
 /* Reader-Focused Pink-Tone Diagonal Linear Gradient */
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #f5f6fa;
+
   background:
     linear-gradient(#10080dcc, #10080dcc), url("../Images/emberSparkBG.png");
 
   background-size: cover;
-  background-position: center top;
+  background-position: 0% 50%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-attachment: scroll;
+
   min-height: 100vh;
+  animation: ambientShift 30s ease infinite;
 }
 
 img {
@@ -1068,4 +1071,17 @@ li {
 
 .page-intro p {
   margin-bottom: 1rem;
+}
+@keyframes ambientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
