@@ -1,0 +1,287 @@
+/* ==========================================
+   FLOATING STAGGERED THOUGHT-BUBBLE CARDS
+   ========================================== */
+.archive-list {
+  gap: 60px;
+  margin-bottom: 95px;
+}
+
+.archive-header {
+  background: color #974a7a;
+}
+
+/* Curated Inspirations header and introduction panel */
+.intro-panel {
+  position: relative;
+  margin: 25px 0 55px;
+  padding: 28px 32px;
+
+  background: #6d355823;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid #d4af3759;
+  border-radius: 22px;
+
+  box-shadow:
+    0 10px 25px #00000066,
+    inset 0 1px 2px #ffe1b31a;
+}
+
+.intro-panel .archive-header {
+  margin-bottom: 20px;
+}
+
+.intro-panel .page-intro p {
+  color: #f9dbe6;
+  font-size: 1.05rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+  font-weight: 400;
+  line-height: 1.7;
+  margin: 0 0 14px;
+}
+
+.intro-panel .page-intro p:last-child {
+  margin-bottom: 0;
+}
+
+body.inspirations-page {
+  background:
+    linear-gradient(#10080dcc, #10080dcc), url("../Images/emberSparkBG.png");
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.archive-item.floating-card {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  z-index: 1;
+
+  width: 68%;
+  max-width: 1050px;
+
+  align-items: flex-start;
+  gap: 26px;
+  padding: 30px 32px;
+
+  /* Dark burgundy background */
+  background: linear-gradient(145deg, #311725 35%, #874363 60%, #352820 100%);
+
+  /* Soft gold outline */
+  border: 1px solid #d4af378c;
+
+  /* Floating dimensional shadow */
+  box-shadow:
+    0 16px 28px #000000bf,
+    0 0 18px #d4af3793,
+    inset 0 1px 2px #6840054f;
+
+  /* Organic, asymmetrical edges */
+  border-radius: 34px 46px 38px 42px / 38px 34px 44px 40px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Thought-bubble trail: larger bubble */
+.archive-item.floating-card::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+
+  width: 34px;
+  height: 34px;
+  bottom: -23px;
+  left: 38px;
+
+  background: #3a212f;
+  border: 1px solid #d4af378c;
+  border-radius: 50%;
+
+  box-shadow:
+    0 16px 28px #000000bf,
+    0 0 18px #d4af3793,
+    inset 0 1px 2px #6840054f;
+}
+
+/* Thought-bubble trail: smaller bubble */
+.archive-item.floating-card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
+  width: 19px;
+  height: 19px;
+  bottom: -48px;
+  left: 20px;
+
+  background: #3a212f;
+  border: 1px solid #d4af374d;
+  border-radius: 50%;
+
+  box-shadow: 0 6px 12px #00000073;
+}
+
+/* Hover effect */
+.archive-item.floating-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #f08aaa;
+
+  box-shadow:
+    0 16px 28px #000000bf,
+    0 0 18px #773759,
+    inset 0 1px 2px #311725;
+}
+
+/* ODD CARDS: Float RIGHT, Image on FAR RIGHT */
+.archive-item.floating-card:nth-child(odd) {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+  border-radius: 46px 34px 42px 36px / 34px 42px 38px 46px;
+
+  /* Different gradient direction for RIGHT-side cards */
+  background: linear-gradient(
+    to bottom left,
+    #311725 35%,
+    #874363 60%,
+    #352820 100%
+  );
+}
+
+/* EVEN CARDS: Float LEFT, Image on FAR LEFT */
+.archive-item.floating-card:nth-child(even) {
+  align-self: flex-start;
+  flex-direction: row;
+}
+
+/* Alternate accent color: softer Phoenix pink */
+.archive-item.floating-card:nth-child(even) {
+  border-color: rgba(240, 138, 170, 0.45);
+}
+
+/* Thought-bubble trails point toward the CENTER of the page */
+
+/* Right-side cards: trail on LEFT */
+.archive-item.floating-card:nth-child(odd)::before {
+  left: 38px;
+}
+
+.archive-item.floating-card:nth-child(odd)::after {
+  left: 20px;
+}
+
+/* Left-side cards: trail on RIGHT */
+.archive-item.floating-card:nth-child(even)::before {
+  left: auto;
+  right: 38px;
+}
+
+.archive-item.floating-card:nth-child(even)::after {
+  left: auto;
+  right: 20px;
+}
+
+/* Image column */
+.archive-item.floating-card figure {
+  margin: 0;
+  flex: 0 0 170px;
+  max-width: 170px;
+}
+
+/* Portrait and book-cover images */
+.archive-item.floating-card .archive-thumb {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+
+  border-radius: 12px;
+  background-color: transparent;
+  border: 1px solid #d4af374d;
+
+  display: block;
+}
+
+/* Text column */
+.archive-item.floating-card .archive-details {
+  flex: 1;
+  min-width: 0;
+}
+/* Influencer descriptions */
+.archive-item.floating-card .archive-details p {
+  color: #f9dbe6;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.65;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+}
+/* Resource lists */
+.archive-item.floating-card ul {
+  margin: 14px 0 0 0;
+  padding-left: 20px;
+}
+
+.archive-item.floating-card li {
+  color: #f9dbe6;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+  font-size: 1rem;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+
+/* Links */
+.archive-item.floating-card a {
+  color: #f08aaa;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.archive-item.floating-card a:hover {
+  color: #e9bd37;
+}
+
+/* Tablet adjustments */
+@media (max-width: 900px) {
+  .archive-item.floating-card {
+    width: 75%;
+  }
+}
+@media (max-width: 768px) {
+  .archive-list {
+    gap: 65px;
+  }
+}
+/* Mobile: stack cards vertically */
+@media (max-width: 768px) {
+  .archive-item.floating-card,
+  .archive-item.floating-card:nth-child(odd),
+  .archive-item.floating-card:nth-child(even) {
+    width: 100%;
+    align-self: stretch;
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .archive-item.floating-card figure {
+    flex: none;
+    max-width: 220px;
+  }
+
+  .archive-item.floating-card::before {
+    width: 25px;
+    height: 25px;
+    bottom: -18px;
+  }
+
+  .archive-item.floating-card::after {
+    width: 14px;
+    height: 14px;
+    bottom: -37px;
+  }
+}

@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <div class="call-to-action">
       <p>
-        <strong>Are you living with chronic stress?</strong> 
-        <br> <em style="color: #F16AA0; font-weight: 600;">What are some ways you care for yourself?</em> <br /> Share your story, your journey, and your self-love practices. Let's create a community of support and encouragement for one another.
+        <strong>Join the Conversation</strong> 
+        <br> <em style="color: #F16AA0; font-weight: 600;">What are your favorite podcasts, books, and influencers that have helped you on your own journey?</em> <br /> Share your story, your journey, and your self-love practices. Let's create a community of support and encouragement for one another.
 
         </p>
     </div>

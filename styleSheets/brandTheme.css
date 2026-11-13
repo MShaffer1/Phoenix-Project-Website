@@ -312,7 +312,6 @@ p a {
   text-align: left;
   color: #f9dbe6;
   line-height: 1.7;
-  font-size: 0.75rem;
 }
 ul {
   margin: 0 0 20px 0;
@@ -826,9 +825,9 @@ li {
         rgba(0, 0, 0, 0.4) 50%,
         rgba(0, 0, 0, 0.9) 100%
       ),
-      url("../Images/Transparent Phoenix.png");
+      url("../Images/Transparent_Phoenix.png");
     background-size: cover;
-    background-position: center;
+    background-position: center 20%;
     min-height: 150px;
     flex-direction: column;
     align-items: center;
@@ -1061,4 +1060,14 @@ li {
   width: 35%; /* Takes up around a third of the text width */
   max-width: 300px; /* Cap at 300px so it stays compact on desktop */
   margin: 4px 18px 10px 0;
+}
+
+.page-intro {
+  max-width: 100%;
+  margin: 0 auto 35px;
+  line-height: 1.25;
+}
+
+.page-intro p {
+  margin-bottom: 1rem;
 }
