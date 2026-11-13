@@ -10,15 +10,13 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #f5f6fa;
-  background-color: #050505;
-  background-image: linear-gradient(
-    to bottom right,
-    #2c0a17 0%,
-    /* Rich Pink-Wine accent (Top-Left) */ #13040a 5%,
-    /* Deep Rose-Charcoal transition */ #080808 10%,
-    /* Matte Black central reading canvas */ #160209 100%
-      /* Subtle Rose-Black finish (Bottom-Right) */
-  );
+  background:
+    linear-gradient(#10080dcc, #10080dcc), url("../Images/emberSparkBG.png");
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-attachment: scroll;
   min-height: 100vh;
 }
@@ -934,7 +932,7 @@ li {
 
 .resource-card {
   clear: both;
-  background-color: #fafafa; /* Off-white background */
+  background-color: #fdfbf2; /* Off-white background */
   border-top: 4px solid #ea2a6f; /* Signature Pink top border */
   border-bottom: 4px solid #d4af37; /* Metallic Gold bottom border */
   border-radius: 8px;
