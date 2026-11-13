@@ -1,0 +1,15 @@
+updated all stylesheets to have animated ember background and updated the letterToSelf.html story page to have a footer with links to the category and homepage. Also updated the index.html to link to the storyCategories.html page instead of the stories folder.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   about.html
+#	modified:   contact.html
+#	modified:   index.html
+#	modified:   stories/letterToSelf.html
+#	modified:   styleSheets/brandTheme.css
+#	modified:   styleSheets/style.css
+#

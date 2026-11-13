@@ -76,7 +76,7 @@ body.inspirations-page {
   /* Floating dimensional shadow */
   box-shadow:
     0 16px 28px #000000bf,
-    0 0 18px #d4af3793,
+    0 0 8px #d4af3793,
     inset 0 1px 2px #6840054f;
 
   /* Organic, asymmetrical edges */
@@ -105,7 +105,7 @@ body.inspirations-page {
 
   box-shadow:
     0 16px 28px #000000bf,
-    0 0 18px #d4af3793,
+    0 0 8px #d4af3793,
     inset 0 1px 2px #6840054f;
 }
 
@@ -121,10 +121,13 @@ body.inspirations-page {
   left: 20px;
 
   background: #3a212f;
-  border: 1px solid #d4af374d;
+  border: 1px solid #d4af378c;
   border-radius: 50%;
 
-  box-shadow: 0 6px 12px #00000073;
+  box-shadow:
+    0 16px 28px #000000bf,
+    0 0 8px #d4af3793,
+    inset 0 1px 2px #6840054f;
 }
 
 /* Hover effect */
@@ -135,8 +138,40 @@ body.inspirations-page {
 
   box-shadow:
     0 16px 28px #000000bf,
-    0 0 18px #773759,
+    0 0 10px #773759,
     inset 0 1px 2px #311725;
+}
+
+/* Thought-bubble trail: large bubble hover */
+.archive-item.floating-card:hover::before {
+  transform: translateY(-5px);
+
+  border-color: #f08aaa;
+
+  box-shadow:
+    0 16px 28px #000000bf,
+    0 0 10px #773759,
+    inset 0 1px 2px #311725;
+
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Thought-bubble trail: smaller bubble hover */
+.archive-item.floating-card:hover::after {
+  transform: translateY(-5px);
+
+  border-color: #f08aaa;
+
+  box-shadow:
+    0 16px 28px #000000bf,
+    0 0 10px #773759,
+    inset 0 1px 2px #311725;
+
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 /* ODD CARDS: Float RIGHT, Image on FAR RIGHT */
