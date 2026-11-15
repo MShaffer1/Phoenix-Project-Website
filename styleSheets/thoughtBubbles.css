@@ -45,15 +45,6 @@
   margin-bottom: 0;
 }
 
-body.inspirations-page {
-  background:
-    linear-gradient(#10080dcc, #10080dcc), url("../Images/emberSparkBG.png");
-
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
 .archive-item.floating-card {
   position: relative;
   isolation: isolate;
