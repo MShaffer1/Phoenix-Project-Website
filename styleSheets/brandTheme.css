@@ -15,7 +15,7 @@ body {
   background:
     linear-gradient(#10080dcc, #10080dcc), url("../Images/emberSparkBG.png");
 
-  background-size: cover;
+  background-size: 120% auto;
   background-position: 0% 50%;
   background-repeat: no-repeat;
   background-attachment: scroll;
