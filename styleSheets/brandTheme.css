@@ -11,14 +11,17 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #f5f6fa;
+  margin: 0;
+  padding: 20px;
+  background-color: #050505; /* Prevents white browser fallback */
 
-  background:
+  background-image:
     linear-gradient(#10080dcc, #10080dcc), url("../Images/emberSparkBG.png");
 
-  background-size: 120% auto;
+  background-size: 135% 135%; /* Guarantees overflow room on both short and tall pages */
   background-position: 0% 50%;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
 
   min-height: 100vh;
   animation: ambientShift 30s ease infinite;
