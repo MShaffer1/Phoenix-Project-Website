@@ -26,6 +26,7 @@ gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
   const head = document.head || document.documentElement;
   const pwaMetas = [
     { name: "theme-color", content: "#000000" },
+    { name: "mobile-web-app-capable", content: "yes" },
     { name: "apple-mobile-web-app-capable", content: "yes" },
     {
       name: "apple-mobile-web-app-status-bar-style",
